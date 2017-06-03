@@ -1,0 +1,13 @@
+#pagination_bottom{font-size:100%;padding-bottom:0;margin:0;_margin:.25em 0 .25em 0;text-align:right;}
+#pagination_bottom1{font-size:100%;padding-bottom:.25em;margin:.25em 0 .25em 0;_margin:.25em 0 .25em 0;text-align:center;}
+#pagination_bottom li{display:inline;border:1px solid #e6e6e6;padding:0;*padding:.3em .2em .3em .5em;margin:.25em .25em;text-align:center;cursor:pointer;border-radius:3px;}
+#pagination_bottom img{vertical-align:text-bottom;*padding-right:3px;}
+#pagination_bottom li.prevPage{margin-right:.55em;}
+#pagination_bottom li.nextPage{margin-left:.55em;}
+#pagination_bottom li.prevPage img{position:relative;left:-1px;}
+#pagination_bottom li.nextPage img{position:relative;left:1px;}
+#pagination_bottom li.rest{background-color:#fff;border:1px solid #e6e6e6;}
+#pagination_bottom li.hover{background-color:#eeeeee;border:1px solid #b7d8ee;}
+#pagination_bottom li.selected{background-color:#eeeeee;border:1px solid #e6e6e6;}
+#pagination_bottom a{color:#006699;text-decoration:none;}
+#pagination_bottom li.selected a{color:#444;font-weight:bold;}
