@@ -44,13 +44,10 @@ font-size:20px;
         </div>
         <div class="topright">
             <?php
-
              if (!isset($_SESSION['admin'])): ?> 
-                                   
-                                echo "<script>window.open('./login.php','_self')</script> ";
-                                    <?php else: ?>
-                                        
-                                        <div class="topright1">
+                echo "<script>window.open('./login.php','_self')</script> ";
+            <?php else: ?>
+                <div class="topright1">
             
             <div class="login"><a href="./logout.php"  ><i class="fa fa-sign-in"></i>Logout</a></div>
             </div>
@@ -116,4 +113,6 @@ font-size:20px;
 	<div class="bgimg"><img src="../img/topbg.jpg" title="Crpl" alt="Crpl"></div>
 </div>
 
- </body>
+
+</body>
+</html>
