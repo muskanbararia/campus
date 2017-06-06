@@ -150,7 +150,7 @@
         </div-->
             <div style="padding-right:12px;">
                 <div style="float: left;">
-                    <a href="job.php?page=<??>">
+                    <a href="job.php?page=<?$page_down?>">
                         <i class="fa fa-chevron-left"></i>
                     </a>
                 </div>
