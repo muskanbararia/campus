@@ -1,241 +1,48 @@
 <?php include "head.php" ?>
-
 <body>
 <?php include "header.php" ?>
-
   
 <div class="mform-middle">
-    <?php include "menu.php" ?> 
+	<?php include "menu.php" ?>
     <div class="menuspace"></div>
 	<div class="bgimg"><img src="img/topbg.jpg" title="Crpl" alt="Crpl"></div>
 </div>
  
-<div style="display:none;"><h1>Register with us</h1></div>
-<div style="display:none;"><h2>Search your dream jobs</h2></div>
+<div style="display:none;"><h1>About Us</h1></div>
+<div style="display:none;"><h2>We help you discover the best talent for your company !</h2></div>
 
-<style>
-.helphint { 
-	border-radius: 5px; 
-   	display: none;
-    position: absolute;
-    
-	font:10px Arial;
-    margin-top: -4px;
-    border: 1px solid #4175C2;
-	box-shadow:0px 2px 5px #333;
-    padding: 10px;
-	z-index:100;
-    background: #ffc url(img/pointer.gif) no-repeat -15px 5px;
-}
-.clshref { color:#3366FF; }
-</style>
-
-<script src="gui/ajax.js" type="text/javascript"></script>
-<script type="text/javascript">
-function validate(frm)
-{
-	str = '';
-	frm.checkWait.disabled = true;
-    frm.checkWait.value = "Please wait";
-	if(str != '')
-	{
-		alert("" + str);
-		frm.checkWait.disabled = false;
-    	frm.checkWait.value = "Send";
-		return false; 
-	}} 
-	
-function validate1(frm)
-{
-	str = '';
-	frm.checkWait1.disabled = true;
-    frm.checkWait1.value = "Please wait";
-	if(str != '')
-	{
-		alert("" + str);
-		frm.checkWait1.disabled = false;
-    	frm.checkWait1.value = "Send OTP";
-		return false; 
-	}} 
-
-function validate2(frm)
-{
-	str = '';
-	if(frm.otp_code.value !== '1480')
-	{
-	str += "\n" + 'Invalid Verification Code';
-	}
-	frm.checkWait2.disabled = true;
-    frm.checkWait2.value = "Please wait";
-	if(str != '')
-	{
-		alert("" + str);
-		frm.checkWait2.disabled = false;
-    	frm.checkWait2.value = "Verify";
-		return false; 
-	}} 
-	
-</script>
-<script type="text/javascript">
-function keyExp(count)
-{
-	f = document.getElementById("keyinfo");
-	f.style.display = (f.style.display == "none")?"block" : "none";	
-}
-</script>
-<script>
-var seconds = 180;
-function secondPassed() {
-    var minutes = Math.round((seconds - 30)/60);
-    var remainingSeconds = seconds % 60;
-    if (remainingSeconds < 10) {
-        remainingSeconds = "0" + remainingSeconds;  
-    }
-    document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "<a href='dsdsd'>Click Here</a> to resend";
-    } else {
-        seconds--;
-    }
-}
-var countdownTimer = setInterval('secondPassed()', 1000);
-</script>
 <div class="middle">
 	<div class="middlediv">
     	<div class="smallspace"></div>
-		
+        <div class="himg"><img src="img/aboutimg.jpg" title="About Us" alt="about us"></div>
+        
         <div class="fivefour">
-        	<div class="largedetail">
+        	<div class="largedetail lleft">
                 <div class="fulldiv">
-                	
-
-                       <div class="orangeheadline"><i class="fa fa-file-text-o"></i> Submit your Details now !</div>
-                    <div class="acforminfo">Please fillup the form below to Submit Resume. <span><i class="star">*</i> Mark are mandatory</span></div>
-					<form  id="form1" action="register.php" method="POST"   enctype="multipart/form-data"> 
-                                        
-                    <div class="acform">
-                    	
-                        
-                        
-                        <ul>
-                        	<li>Your Name <i class="star">*</i></li>
-                            <li><input name="name" value="" type="text" required maxlength="40" ></li>
-                        </ul>
-                        
-                        <ul>
-                        	<li>Email Address <i class="star">*</i></li>
-                            <li><input name="email" value="" type="email" maxlength="40"  required ></li>
-                        </ul>
-                        <ul>
-                        	<li>Mobile No <i class="star">*</i></li>
-                            <li>
-                            	
-                                <input name="mobile" value="" required type="number" oninput="maxLengthCheck(this)" maxlength = "10" min = "0" max = "9999999999">
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>Your Password <i class="star">*</i></li>
-                            <li><input name="password" value="" type="password" required maxlength="40" ></li>
-                        </ul>
-                       
-                        
-                        
-                        <ul>
-                        	<li>&nbsp;</li>
-                            <li>
-                            	<input type="checkbox" id="c55" required  name="checkbox" />
-                        		<label for="c55"><span></span> I Accept the <a href="#" target="_blank" class="red">Term & conditions</a></label>
-                            </li>
-                        </ul>
-                        <hr />
-                        
-                        <ul>
-                        	<li>&nbsp;</li>
-                            <li>
-                                <input type="submit" class="bluebtn" name="Submit" id="checkWait" value="Submit" />
-                                <button type="reset" class="whitebtn reset">Reset</button>
-                            </li>
-                        </ul>
-                    </div>
-                <input type="hidden" name="frm_action" value="1">
-                <input type="hidden" name="actid" value="030">
-                <input type="hidden" name="u_id" value="">
-                <input type="hidden" name="execpath" value="" />
-
-                </form>
-				<?php
+                <div class="acforminfo"><i class="fa fa-home"></i> <i class="fa fa-angle-right"></i> <b>About Us</b></div>
+                </div>
+                <div class="fulldiv">
+                <p>
+                <strong>We help you discover the best talent for your company !</strong><br><br>
                     
-                           
-                    include("database/db_conection.php");  
-
-                    if(isset($_POST['Submit']) ) 
-                    {  
-                        $name=$_POST['name'];
-                        $email=$_POST['email'];
-                        $phone=$_POST['mobile'];
-                        $pwd=$_POST['password'];
-                        
-
-                        $check_if_package="select * from user WHERE email='$email'";
-                        $run_query=$dbcon->query($check_if_package);  
-
-                        if($run_query->num_rows>0)  
-                        {  
-                           echo "<script>alert('User Already exists')</script>";  
-                        }
-
-                        else{
-                        $insert_package="insert into user (name, email, mobile,password) VALUE ('$name','$email','$phone','$pwd')";  
-
-
-                        if($dbcon->query($insert_package))  
-                        {  
-                            echo "<script>alert('Registered successfully')</script>";
-                        }  
-                        }   
-                    }
-                ?>               
-                
-                
-                
-                
-                
-                
-                
+      			Finding  skilled resources and retaining them is a   challenge that many companies face.  We at Campus Catalyst with huge experience in Human Resource  Management and Consulting   help you find the right candidates for your company,  partner with you   in maximizing potential of your human capital and optimizing  your HR   processes.<br><br>
+        Over  the years, we have built up strong partnerships with companies in   India and  abroad; helped build successful companies by identifying the   best candidates  for them, many of whom have gone on to create their own   success stories. With  human capital being the most valuable asset for   your company today, we at Campus Catalyst make sure that you get   the best in the business. Our wide suite of  services lets you leverage   your company's human capital and optimize the  performance of your   employees.
+        	  <br><br>
+        Our  services have developed based on international best practices and   learning's  from thousands of assignments executed by us over the years,   and is adapted to  suit our clients' businesses. Be it the right talent   for your organization, or  a cost-effective consulting solution, or a   training program, or solutions for  enhancing your HR processes, our   services are customized just for you.<br><br>
+        We  provide innovative approaches for each of our client's unique needs.   We have  in-house capabilities and resources to handle the most   challenging aspects of  your recruitment process (advertisement,   pre-screening dedicated resources, and  negotiation). We add velocity   &amp; value to your recruitment efforts with an  additional level of   support.<br><br>
+        With our  cost effective solutions and customized strategy we make a   sense for specific  needs and objectives of an organization, Our HR   solutions provides an  economical way to procure talent to your   organization. Be it a single  professional to complement your team or an   entire work-force. We have the  option to improve the existing   capabilities of your organizations.</p>
+      <p>
+       <br><strong>Our Presence in India </strong><br><br>  
+        Campus Catalyst is a national HR service  provider   servicing world class companies across the globe. Started in 2004, the    company has grown into a full spectrum HR services provider for clients    worldwide. It has helped generate career opportunities for thousands of    individuals in the countries, and has worked for over Fortune 500    organizations.<br><br>
+        Campus Catalyst offers the broadest HR  services   portfolio ranging from search, selection, staffing, consulting,    outsourcing, training and HR automation. The organization has a vast   network of  offices across the country to be within the reach of   candidates and flexi  workers.<br><br>
+        Campus Catalyst continues to focus on  developing   customized and innovative HR services, leveraging on its unique    strengths of geographical presence and end-to-end capability across all   HR  service functions.
+        </p>
+        
+        
                 </div>
             </div>
         </div>
-        <br><br><br><br><br>
-        <div class="fivethree">
-        	
-
-            <div class="rightinfo2">
-            	<div class="rtitle">Resume Development !</div>
-                <div class="rcontent">
-                	<ul>
-                      <li><a href="#" title="Resume Writing" target="_blank"><b>Resume Writing</b></a><br>Get our experts to write your resume</li>
-                      <li><a href="#" title="Resume Display" target="_blank"><b>Resume Display</b></a><br>Lets all recruiters see your resume </li>
-                      <li><a href="#" title="Jobs4U" target="_blank"><b>Jobs4U</b></a><br>Expert help the better job relevancy </li>
-                    </ul>
-                    <a href="#" title="View More" target="_blank" class="rbutton2">View More...</a>
-                </div>
-            </div>
-        </div>
-      
-               <div class="fivethree">
-        	<div class="rectangleads">
-            <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
-<!-- Crplindia.com-applyjob-vertical-right-120-240 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:120px;height:240px"
-     data-ad-client="ca-pub-1765482116803207"
-     data-ad-slot="5868799900"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-            </div></div>
-      
+        
         
     </div>
     <div class="smallspace"></div>
@@ -274,9 +81,10 @@ function validate(frm)
 </style>
 
 
+
 <div id="pop2" class="needpopup">
     
-    <form action="http://www.crplindia.com/index.php?actid=67&amp;Path=Dynamic&amp;pth=030" method="post" onSubmit="return validate(this);">
+    <form action="#" method="post" onSubmit="return validate(this);">
     <div class="popohline"><i class="fa fa-envelope-o"></i> Job Alert!</div>
     <div class="fulldiv">
     Get Free Job Alerts on your Mobile and Email from Corporate Resourses
@@ -296,7 +104,7 @@ function validate(frm)
 	</div>
     <div class="fulldiv">
         <div class="textbox">Keyword(s) <i class="star">*</i></div>
-        <div class="inputbox"><input name="key_word" value="admin administration admin executive office assistant admin officer admin assistant administration executive" required  type="text"></div>
+        <div class="inputbox"><input name="key_word" value="" required  type="text"></div>
 	</div>
     <div class="fulldiv">
         <div class="textbox">Location(s) <i class="star">*</i></div>
@@ -810,5 +618,5 @@ ga('send', 'pageview');
 
 	</body>
 
-
+<!-- Mirrored from www.crplindia.com/index.php?actid=03&path=About-us&P-id=1746l1deAgef5915 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 May 2017 07:09:11 GMT -->
 </html>

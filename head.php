@@ -37,3 +37,4 @@ margin: 3px 0 3px 5px;
 font-size:20px;
 }
 </style>
+<?php  session_start();  ?>

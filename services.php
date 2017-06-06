@@ -10,234 +10,172 @@
 	<div class="bgimg"><img src="img/topbg.jpg" title="Crpl" alt="Crpl"></div>
 </div>
  
-<div style="display:none;"><h1>Register with us</h1></div>
-<div style="display:none;"><h2>Search your dream jobs</h2></div>
+<div style="display:none;"><h1>Our Services : Job Recruitment</h1></div>
+<div style="display:none;"><h2>Campus Catalyst </h2></div>
 
-<style>
-.helphint { 
-	border-radius: 5px; 
-   	display: none;
-    position: absolute;
-    
-	font:10px Arial;
-    margin-top: -4px;
-    border: 1px solid #4175C2;
-	box-shadow:0px 2px 5px #333;
-    padding: 10px;
-	z-index:100;
-    background: #ffc url(img/pointer.gif) no-repeat -15px 5px;
-}
-.clshref { color:#3366FF; }
-</style>
 
-<script src="gui/ajax.js" type="text/javascript"></script>
-<script type="text/javascript">
-function validate(frm)
-{
-	str = '';
-	frm.checkWait.disabled = true;
-    frm.checkWait.value = "Please wait";
-	if(str != '')
-	{
-		alert("" + str);
-		frm.checkWait.disabled = false;
-    	frm.checkWait.value = "Send";
-		return false; 
-	}} 
-	
-function validate1(frm)
-{
-	str = '';
-	frm.checkWait1.disabled = true;
-    frm.checkWait1.value = "Please wait";
-	if(str != '')
-	{
-		alert("" + str);
-		frm.checkWait1.disabled = false;
-    	frm.checkWait1.value = "Send OTP";
-		return false; 
-	}} 
-
-function validate2(frm)
-{
-	str = '';
-	if(frm.otp_code.value !== '1480')
-	{
-	str += "\n" + 'Invalid Verification Code';
-	}
-	frm.checkWait2.disabled = true;
-    frm.checkWait2.value = "Please wait";
-	if(str != '')
-	{
-		alert("" + str);
-		frm.checkWait2.disabled = false;
-    	frm.checkWait2.value = "Verify";
-		return false; 
-	}} 
-	
-</script>
-<script type="text/javascript">
-function keyExp(count)
-{
-	f = document.getElementById("keyinfo");
-	f.style.display = (f.style.display == "none")?"block" : "none";	
+<script language="javascript">
+function flipCell(count){
+f=document.getElementById("mcell");
+f.style.display=(f.style.display == "none")?"block":"none";
 }
-</script>
-<script>
-var seconds = 180;
-function secondPassed() {
-    var minutes = Math.round((seconds - 30)/60);
-    var remainingSeconds = seconds % 60;
-    if (remainingSeconds < 10) {
-        remainingSeconds = "0" + remainingSeconds;  
-    }
-    document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "<a href='dsdsd'>Click Here</a> to resend";
-    } else {
-        seconds--;
-    }
-}
-var countdownTimer = setInterval('secondPassed()', 1000);
 </script>
 <div class="middle">
+
 	<div class="middlediv">
-    	<div class="smallspace"></div>
-		
-        <div class="fivefour">
-        	<div class="largedetail">
-                <div class="fulldiv">
-                	
-
-                       <div class="orangeheadline"><i class="fa fa-file-text-o"></i> Submit your Details now !</div>
-                    <div class="acforminfo">Please fillup the form below to Submit Resume. <span><i class="star">*</i> Mark are mandatory</span></div>
-					<form  id="form1" action="register.php" method="POST"   enctype="multipart/form-data"> 
-                                        
-                    <div class="acform">
-                    	
-                        
-                        
-                        <ul>
-                        	<li>Your Name <i class="star">*</i></li>
-                            <li><input name="name" value="" type="text" required maxlength="40" ></li>
-                        </ul>
-                        
-                        <ul>
-                        	<li>Email Address <i class="star">*</i></li>
-                            <li><input name="email" value="" type="email" maxlength="40"  required ></li>
-                        </ul>
-                        <ul>
-                        	<li>Mobile No <i class="star">*</i></li>
-                            <li>
-                            	
-                                <input name="mobile" value="" required type="number" oninput="maxLengthCheck(this)" maxlength = "10" min = "0" max = "9999999999">
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>Your Password <i class="star">*</i></li>
-                            <li><input name="password" value="" type="password" required maxlength="40" ></li>
-                        </ul>
-                       
-                        
-                        
-                        <ul>
-                        	<li>&nbsp;</li>
-                            <li>
-                            	<input type="checkbox" id="c55" required  name="checkbox" />
-                        		<label for="c55"><span></span> I Accept the <a href="#" target="_blank" class="red">Term & conditions</a></label>
-                            </li>
-                        </ul>
-                        <hr />
-                        
-                        <ul>
-                        	<li>&nbsp;</li>
-                            <li>
-                                <input type="submit" class="bluebtn" name="Submit" id="checkWait" value="Submit" />
-                                <button type="reset" class="whitebtn reset">Reset</button>
-                            </li>
-                        </ul>
-                    </div>
-                <input type="hidden" name="frm_action" value="1">
-                <input type="hidden" name="actid" value="030">
-                <input type="hidden" name="u_id" value="">
-                <input type="hidden" name="execpath" value="" />
-
-                </form>
-				<?php
-                    
-                           
-                    include("database/db_conection.php");  
-
-                    if(isset($_POST['Submit']) ) 
-                    {  
-                        $name=$_POST['name'];
-                        $email=$_POST['email'];
-                        $phone=$_POST['mobile'];
-                        $pwd=$_POST['password'];
-                        
-
-                        $check_if_package="select * from user WHERE email='$email'";
-                        $run_query=$dbcon->query($check_if_package);  
-
-                        if($run_query->num_rows>0)  
-                        {  
-                           echo "<script>alert('User Already exists')</script>";  
-                        }
-
-                        else{
-                        $insert_package="insert into user (name, email, mobile,password) VALUE ('$name','$email','$phone','$pwd')";  
-
-
-                        if($dbcon->query($insert_package))  
-                        {  
-                            echo "<script>alert('Registered successfully')</script>";
-                        }  
-                        }   
-                    }
-                ?>               
-                
-                
-                
-                
-                
-                
-                
-                </div>
-            </div>
-        </div>
-        <br><br><br><br><br>
-        <div class="fivethree">
-        	
-
-            <div class="rightinfo2">
-            	<div class="rtitle">Resume Development !</div>
-                <div class="rcontent">
-                	<ul>
-                      <li><a href="#" title="Resume Writing" target="_blank"><b>Resume Writing</b></a><br>Get our experts to write your resume</li>
-                      <li><a href="#" title="Resume Display" target="_blank"><b>Resume Display</b></a><br>Lets all recruiters see your resume </li>
-                      <li><a href="#" title="Jobs4U" target="_blank"><b>Jobs4U</b></a><br>Expert help the better job relevancy </li>
-                    </ul>
-                    <a href="#" title="View More" target="_blank" class="rbutton2">View More...</a>
-                </div>
-            </div>
-        </div>
-      
-               <div class="fivethree">
-        	<div class="rectangleads">
-            <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
-<!-- Crplindia.com-applyjob-vertical-right-120-240 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:120px;height:240px"
-     data-ad-client="ca-pub-1765482116803207"
-     data-ad-slot="5868799900"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-            </div></div>
-      
+    	<div class="space"></div>
         
-    </div>
+    	<div class="onethreediv">
+        	<a onclick="#">
+        	<div class="whychoose newbg">
+            	<div class="imgframe">
+                	<div class="imglogo"><img src="img/crpl2.png" alt="Corporate Resources" title="Corporate Resources" width="318" height="80"></div>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="twothreediv">
+        	<div class="leftmargin">
+                
+                <div class="bluefullheadline"><i class="fa fa-users"></i>Our Services | Job Recruitment</div>
+                <div class="fulldiv middletext">
+                    
+                <p>
+                We believe in partnering our clients in talent sourcing and can   handle all Top, Senior and Middle management requirements across   industries / functions / locations. We can be your one stop shop for all   yours sourcing.
+                </p>
+                <p>
+                
+                <strong>Campus Catalyst</strong> work with client companies, building   relationships in order to gain a better understanding of their   recruitment needs and requirements. We attract candidates by drafting   advertising copy for use in a wide range of media, as well as by   networking, headhunting and through referrals. We screen candidates,   interview them, do background checks, and finally match candidates to   their clients.
+                </p>
+                <p>
+                
+                At Campus Catalyst we &ldquo;get&rdquo; people. Understanding people   helps us select and recruit the right candidates.  Understanding our   clients enables us to find smart solutions for them. </p>
+                
+                
+                
+                <p>Campus Catalyst desires continues to be your go-to staffing company for all our staffing needs, as you could not ever imagine having a reason to take our business to anywhere</p>
+                <p>
+                We have adopted the international practices and procedures that are designed to attract and hire the best talent available in the market; thereby offering the best employee recruitment. We provide our client companies with not only a set of candidates, but also discussion on best-fit market availability, comparative benchmarking and a comfort knowing. Our online recruitment solutions are the best in the market today. 
+                <div style="float:right"><a href="javascript:flipCell(0)"><span class="cpl1">Read more...</span></a></div>
+                
+                </p>
+                </div>
+            </div>
+        </div>
+       
+        
+        <div class="fulldiv middletext" id="mcell" style="display: none;">
+        <p>Consultants manage the recruitment process for both candidates and   clients from start to finish. Key elements of the role include:<br /></p>
+        <ul class="listsmallicon">
+          <li>Providing market knowledge and advice to employers</li>
+          <li>Sourcing suitable candidates via networking and advertising</li>
+          <li>Maintaining candidate networks</li>
+          <li>Providing resume, interview and career advice to candidates</li>
+          <li>Interviewing candidates on a general basis and for specific roles</li>
+          <li>Managing the job offer process and negotiating salary packages</li>
+          <li>Maintaining market and commercial awareness through research and networking</li>
+          <li>Developing and managing on-going client relationships - both on the phone and face to face</li>
+          <li>Organising and attending regular client integrative events</li>
+        </ul>
+        </p>
+<strong>Our expectations from our clients</strong><br>
+        <ul class="listsmalliconround">
+           <li>Plenty of details about a position - as much detailing as possible.</li>
+           <li>Give us only those requirements which are immediate - we can execute them fast.</li>
+           <li>Prompt and   detailed feedback on the reasons for non-suitability of profiles and if   suitable, on the further processes to complete the hiring.</li>
+        </ul>
+       
+        Campus Catalyst posses the best talents and skilled manpower(s),   that is ready to meet the global challenges for Search, Selection,   Staffing and Outsourcing Services. Our company is also equipped with   latest technology and offerings to strengthen our services for   successful recruitment services globally. We use structured   methodologies and proven processes that help us as well as our client to   reduce the cost &amp; complexity of the selection, staffing,   outsourcing and head hunting process. It also reduces the risk as well   as to implement fewer efforts for more output. We assist you with   required efforts at the every step of the assignment life cycle. Our   structured methodology for search, selection, outsourcing, staffing and   headhunting also guides our client the best combination of time frame   and cost effective services.
+        
+        Campus Catalyst has successfully completed a multitude of such   assignments. Requiring us to place a large number of people   simultaneously, possessing varied skill-sets and at different levels to   contribute towards an efficient unit for the client, with a quick   turnaround time.
+        </div>     
+  </div>
+
+    <div class="middlediv">
+    	<div class="space"></div>
+    	<div class="largeheadline">
+        	<div class="ltext">Services We Offer</div>
+            <div class="lline"></div>
+        </div>
+        <div class="ca-menu">
+            <ul>
+            	<li title="Recruitment Process"> 
+                    <a href="#">
+                        <span class="ca-icon"><img src="img/services/s1.png" width="136" height="103" alt="Recruitment Process"></span>
+                        <div class="ca-content">
+                            <div class="ca-main" align="center">Recruitment Process</div>
+                        </div>
+                    </a>
+                </li>
+                <li title="Executive Search">
+                    <a href="#">
+                        <span class="ca-icon"><img src="img/services/s2.png" width="136" height="103" alt="Executive Search"></span>
+                        <div class="ca-content">
+                            <div class="ca-main" align="center">Executive Search</div>
+                        </div>
+                    </a>
+                </li>
+                <li title="Selection">
+                    <a href="#">
+                        <span class="ca-icon"><img src="img/services/s3.png" width="136" height="103" alt="Selection"></span>
+                        <div class="ca-content">
+                            <div class="ca-main" align="center">Selection</div>
+                        </div>
+                    </a>
+                </li>
+                <li title="Staffing">
+                    <a href="#">
+                        <span class="ca-icon"><img src="img/services/s4.png" width="136" height="103" alt="Staffing"></span>
+                        <div class="ca-content">
+                            <div class="ca-main" align="center">Staffing</div>
+                        </div>
+                    </a>
+                </li>
+                <li title="HR Consulting">
+                    <a href="#">
+                        <span class="ca-icon"><img src="img/services/s5.png" width="136" height="103" alt="HR Consulting"></span>
+                        <div class="ca-content">
+                            <div class="ca-main" align="center">HR Consulting</div>
+                        </div>
+                    </a>
+                </li>
+                <li title="Outsourcing">
+                    <a href="#">
+                        <span class="ca-icon"><img src="img/services/s6.png" width="136" height="103" alt="Outsourcing"></span>
+                        <div class="ca-content">
+                            <div class="ca-main" align="center">Outsourcing</div>
+                        </div>
+                    </a>
+                </li>
+                <li title="Training">
+                    <a href="#">
+                        <span class="ca-icon"><img src="img/services/s7.png" width="136" height="103" alt="Training"></span>
+                        <div class="ca-content">
+                            <div class="ca-main" align="center">Training</div>
+                        </div>
+                    </a>
+                </li>
+                <li title="Assesment">
+                    <a href="#">
+                        <span class="ca-icon"><img src="img/services/s8.png" width="136" height="103" alt="Assesment"></span>
+                        <div class="ca-content">
+                            <div class="ca-main" align="center">Assesment</div>
+                        </div>
+                    </a>
+                </li>
+                <li title="Code Of Conduct">
+                    <a href="#">
+                        <span class="ca-icon"><img src="img/services/s9.png" width="136" height="103" alt="Code Of Conduct"></span>
+                        <div class="ca-content">
+                            <div class="ca-main" align="center">Code Of Conduct</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="space"></div>
+    </div>    <div class="orangeheadline2"><a href="#" target="_blank" title="Download Brochure">Download Brochure</a>
+    <p>Campus Catalyst desires continues to be your go-to staffing company for all our staffing needs, as you could not ever imagine having a reason to take our business to anywhere else....</p></div>
     <div class="smallspace"></div>
 </div>
 
@@ -276,7 +214,7 @@ function validate(frm)
 
 <div id="pop2" class="needpopup">
     
-    <form action="http://www.crplindia.com/index.php?actid=67&amp;Path=Dynamic&amp;pth=030" method="post" onSubmit="return validate(this);">
+    <form action="http://www.crplindia.com/index.php?actid=67&amp;Path=Dynamic&amp;pth=014" method="post" onSubmit="return validate(this);">
     <div class="popohline"><i class="fa fa-envelope-o"></i> Job Alert!</div>
     <div class="fulldiv">
     Get Free Job Alerts on your Mobile and Email from Corporate Resourses
@@ -296,7 +234,7 @@ function validate(frm)
 	</div>
     <div class="fulldiv">
         <div class="textbox">Keyword(s) <i class="star">*</i></div>
-        <div class="inputbox"><input name="key_word" value="admin administration admin executive office assistant admin officer admin assistant administration executive" required  type="text"></div>
+        <div class="inputbox"><input name="key_word" value="" required  type="text"></div>
 	</div>
     <div class="fulldiv">
         <div class="textbox">Location(s) <i class="star">*</i></div>

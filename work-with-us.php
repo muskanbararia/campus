@@ -1,106 +1,16 @@
 <?php include "head.php" ?>
-
 <body>
 <?php include "header.php" ?>
-
   
 <div class="mform-middle">
-    <?php include "menu.php" ?> 
+  <?php include "menu.php" ?>
     <div class="menuspace"></div>
 	<div class="bgimg"><img src="img/topbg.jpg" title="Crpl" alt="Crpl"></div>
 </div>
  
-<div style="display:none;"><h1>Register with us</h1></div>
-<div style="display:none;"><h2>Search your dream jobs</h2></div>
+<div style="display:none;"><h1>Work with us</h1></div>
+<div style="display:none;"><h2>Being in the people business and one of the small employers,</h2></div>
 
-<style>
-.helphint { 
-	border-radius: 5px; 
-   	display: none;
-    position: absolute;
-    
-	font:10px Arial;
-    margin-top: -4px;
-    border: 1px solid #4175C2;
-	box-shadow:0px 2px 5px #333;
-    padding: 10px;
-	z-index:100;
-    background: #ffc url(img/pointer.gif) no-repeat -15px 5px;
-}
-.clshref { color:#3366FF; }
-</style>
-
-<script src="gui/ajax.js" type="text/javascript"></script>
-<script type="text/javascript">
-function validate(frm)
-{
-	str = '';
-	frm.checkWait.disabled = true;
-    frm.checkWait.value = "Please wait";
-	if(str != '')
-	{
-		alert("" + str);
-		frm.checkWait.disabled = false;
-    	frm.checkWait.value = "Send";
-		return false; 
-	}} 
-	
-function validate1(frm)
-{
-	str = '';
-	frm.checkWait1.disabled = true;
-    frm.checkWait1.value = "Please wait";
-	if(str != '')
-	{
-		alert("" + str);
-		frm.checkWait1.disabled = false;
-    	frm.checkWait1.value = "Send OTP";
-		return false; 
-	}} 
-
-function validate2(frm)
-{
-	str = '';
-	if(frm.otp_code.value !== '1480')
-	{
-	str += "\n" + 'Invalid Verification Code';
-	}
-	frm.checkWait2.disabled = true;
-    frm.checkWait2.value = "Please wait";
-	if(str != '')
-	{
-		alert("" + str);
-		frm.checkWait2.disabled = false;
-    	frm.checkWait2.value = "Verify";
-		return false; 
-	}} 
-	
-</script>
-<script type="text/javascript">
-function keyExp(count)
-{
-	f = document.getElementById("keyinfo");
-	f.style.display = (f.style.display == "none")?"block" : "none";	
-}
-</script>
-<script>
-var seconds = 180;
-function secondPassed() {
-    var minutes = Math.round((seconds - 30)/60);
-    var remainingSeconds = seconds % 60;
-    if (remainingSeconds < 10) {
-        remainingSeconds = "0" + remainingSeconds;  
-    }
-    document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "<a href='dsdsd'>Click Here</a> to resend";
-    } else {
-        seconds--;
-    }
-}
-var countdownTimer = setInterval('secondPassed()', 1000);
-</script>
 <div class="middle">
 	<div class="middlediv">
     	<div class="smallspace"></div>
@@ -108,134 +18,58 @@ var countdownTimer = setInterval('secondPassed()', 1000);
         <div class="fivefour">
         	<div class="largedetail">
                 <div class="fulldiv">
-                	
-
-                       <div class="orangeheadline"><i class="fa fa-file-text-o"></i> Submit your Details now !</div>
-                    <div class="acforminfo">Please fillup the form below to Submit Resume. <span><i class="star">*</i> Mark are mandatory</span></div>
-					<form  id="form1" action="register.php" method="POST"   enctype="multipart/form-data"> 
-                                        
-                    <div class="acform">
-                    	
-                        
-                        
-                        <ul>
-                        	<li>Your Name <i class="star">*</i></li>
-                            <li><input name="name" value="" type="text" required maxlength="40" ></li>
-                        </ul>
-                        
-                        <ul>
-                        	<li>Email Address <i class="star">*</i></li>
-                            <li><input name="email" value="" type="email" maxlength="40"  required ></li>
-                        </ul>
-                        <ul>
-                        	<li>Mobile No <i class="star">*</i></li>
-                            <li>
-                            	
-                                <input name="mobile" value="" required type="number" oninput="maxLengthCheck(this)" maxlength = "10" min = "0" max = "9999999999">
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>Your Password <i class="star">*</i></li>
-                            <li><input name="password" value="" type="password" required maxlength="40" ></li>
-                        </ul>
-                       
-                        
-                        
-                        <ul>
-                        	<li>&nbsp;</li>
-                            <li>
-                            	<input type="checkbox" id="c55" required  name="checkbox" />
-                        		<label for="c55"><span></span> I Accept the <a href="#" target="_blank" class="red">Term & conditions</a></label>
-                            </li>
-                        </ul>
-                        <hr />
-                        
-                        <ul>
-                        	<li>&nbsp;</li>
-                            <li>
-                                <input type="submit" class="bluebtn" name="Submit" id="checkWait" value="Submit" />
-                                <button type="reset" class="whitebtn reset">Reset</button>
-                            </li>
-                        </ul>
-                    </div>
-                <input type="hidden" name="frm_action" value="1">
-                <input type="hidden" name="actid" value="030">
-                <input type="hidden" name="u_id" value="">
-                <input type="hidden" name="execpath" value="" />
-
-                </form>
-				<?php
+                    <div class="acforminfo"><b>Work with us</b></div>
                     
-                           
-                    include("database/db_conection.php");  
-
-                    if(isset($_POST['Submit']) ) 
-                    {  
-                        $name=$_POST['name'];
-                        $email=$_POST['email'];
-                        $phone=$_POST['mobile'];
-                        $pwd=$_POST['password'];
-                        
-
-                        $check_if_package="select * from user WHERE email='$email'";
-                        $run_query=$dbcon->query($check_if_package);  
-
-                        if($run_query->num_rows>0)  
-                        {  
-                           echo "<script>alert('User Already exists')</script>";  
-                        }
-
-                        else{
-                        $insert_package="insert into user (name, email, mobile,password) VALUE ('$name','$email','$phone','$pwd')";  
-
-
-                        if($dbcon->query($insert_package))  
-                        {  
-                            echo "<script>alert('Registered successfully')</script>";
-                        }  
-                        }   
-                    }
-                ?>               
-                
-                
-                
-                
-                
-                
-                
+                    <div class="fulldiv">
+                   <div class="himg"><img src="img/wrkwithus1.jpg" title="Work with Us" alt="Work with Us"></div>
+                   <p><strong>Good to know you</strong> is not just our philosophy. It is fundamental to our practice, the key to our    success and at the heart of everything we do. We focus on really getting to    know our clients and candidates and building a good relationship with them.    This approach better enables us to make an ideal match between candidates and employers, and not only meet their needs, but exceed their expectations. They    experience us not just as professional and driven, but also friendly and open. 
+                   </p>
+      <p>&nbsp;</p>
+      <p>Being in the people business and    one of the small employers, we believe that people are our assets. </p></td>
+  </tr>
+  <tr>
+    <td><p>&nbsp;</p>
+      <p>As we strongly believe that    success depends largely on the people, we employ the best people, and give    them a best work environment, training, opportunities and support, so that    they can develop to their full potential. </p>
+      <p>We nurture talent and support our    future leaders to develop the skills and strategic management capabilities,    to succeed within the global business world. Our work environment constantly    challenges our people and offers them immense opportunities for learning and    development. The training that is offered is aimed at building professional    skills and creates a natural setting for sharing experiences and best    practices. </p>
+      <p>We believe in choosing and    rewarding people based on merit and offer career development to employees at    all levels. Career moves are horizontal, involving new areas of expertise or    service, vertical, involving added competencies and extra responsibility and    diagonal, involving both horizontal and vertical directions. Our members also    have an opportunity to gain international experience through our    international volunteering work. </p>
+      <p>Come and work with us. You will    get to work for the best brands and interact with the best brains in your    chosen field of work. </p>
+      
+      <div class="whitediv">
+                <a href="career/index0e9a.html?actid=014&amp;path=Current-Openings&amp;P-id=1746l1deAgef5915" class="green" title="Explore the world of Opportunities" target="_blank">Explore the world of Opportunities</a>    |   
+                <a href="career/index.html" target="_blank" title="Career with us" class="green">Career with us</a>
+      </div>
+      
+                    </div>
+					
                 </div>
             </div>
         </div>
-        <br><br><br><br><br>
         <div class="fivethree">
-        	
-
+            <div class="rightinfo">
+            	<div class="rtitle">Partner Job Portal</div>
+                <div class="rcontent">
+                	<ul>
+                      <li>Register Free for the best job offers.</li>
+                      <li>Organize and systemize your job search!.</li>
+                      <li>Apply to jobs faster</li>
+                      <li>Keep your job search secret</li>
+                      <li>Ensure privacy of your personal details</li>
+                    </ul>
+                    <a href="index4d1b.html?actid=098&amp;path=CreateAccount&amp;P-id=1746l1deAgef5915" title="Create Account" target="_blank" class="rbutton">Create Account</a>
+                </div>
+            </div>
             <div class="rightinfo2">
             	<div class="rtitle">Resume Development !</div>
                 <div class="rcontent">
                 	<ul>
-                      <li><a href="#" title="Resume Writing" target="_blank"><b>Resume Writing</b></a><br>Get our experts to write your resume</li>
-                      <li><a href="#" title="Resume Display" target="_blank"><b>Resume Display</b></a><br>Lets all recruiters see your resume </li>
-                      <li><a href="#" title="Jobs4U" target="_blank"><b>Jobs4U</b></a><br>Expert help the better job relevancy </li>
+                      <li><a href="resume/index.html" title="Resume Writing" target="_blank"><b>Resume Writing</b></a><br>Get our experts to write your resume</li>
+                      <li><a href="resume/index.html" title="Resume Display" target="_blank"><b>Resume Display</b></a><br>Lets all recruiters see your resume </li>
+                      <li><a href="resume/index.html" title="Jobs4U" target="_blank"><b>Jobs4U</b></a><br>Expert help the better job relevancy </li>
                     </ul>
-                    <a href="#" title="View More" target="_blank" class="rbutton2">View More...</a>
+                    <a href="resume/index.html" title="View More" target="_blank" class="rbutton2">View More...</a>
                 </div>
             </div>
         </div>
-      
-               <div class="fivethree">
-        	<div class="rectangleads">
-            <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
-<!-- Crplindia.com-applyjob-vertical-right-120-240 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:120px;height:240px"
-     data-ad-client="ca-pub-1765482116803207"
-     data-ad-slot="5868799900"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-            </div></div>
-      
         
     </div>
     <div class="smallspace"></div>
@@ -273,10 +107,13 @@ function validate(frm)
  
 </style>
 
+<div class="floatform">
+<a href="#" data-needpopup-show="#pop2" class="jobalert"><img src="img/jobalert.png" width="38" height="145" alt="Job alert"></a>
+</div>
 
 <div id="pop2" class="needpopup">
     
-    <form action="http://www.crplindia.com/index.php?actid=67&amp;Path=Dynamic&amp;pth=030" method="post" onSubmit="return validate(this);">
+    <form action="http://www.crplindia.com/index.php?actid=67&amp;Path=Dynamic&amp;pth=027" method="post" onSubmit="return validate(this);">
     <div class="popohline"><i class="fa fa-envelope-o"></i> Job Alert!</div>
     <div class="fulldiv">
     Get Free Job Alerts on your Mobile and Email from Corporate Resourses
@@ -296,7 +133,7 @@ function validate(frm)
 	</div>
     <div class="fulldiv">
         <div class="textbox">Keyword(s) <i class="star">*</i></div>
-        <div class="inputbox"><input name="key_word" value="admin administration admin executive office assistant admin officer admin assistant administration executive" required  type="text"></div>
+        <div class="inputbox"><input name="key_word" value="" required  type="text"></div>
 	</div>
     <div class="fulldiv">
         <div class="textbox">Location(s) <i class="star">*</i></div>
@@ -680,7 +517,7 @@ function validate(frm)
         <div class="inputbox">
         <input type="checkbox" id="j" required checked="checked" name="trh_sms" value="Yes"  />
             <label for="j"><span></span>   I agree with 
-            <a href="#" target="_blank" class="cpl1">Terms & Condition</a> to recieve Jobs Alerts through SMS &amp; Mail</label>
+            <a href="index1c3c.html?actid=60&amp;path=Terms-Use&amp;&amp;P-id=1746l1deAgef5915" target="_blank" class="cpl1">Terms & Condition</a> to recieve Jobs Alerts through SMS &amp; Mail</label>
         </div>
 	</div>
     <div class="fulldiv">
@@ -697,23 +534,142 @@ function validate(frm)
     </form>
 
     <div class="fulldiv">
-    <div class="acforminfo">No longer intrested for the service <a href="#"><strong>Click Here</strong></a> to Unsubscribe</div>
+    <div class="acforminfo">No longer intrested for the service <a href="indexaedc.html?actid=062&amp;path=DoNot-Disturb&amp;execpath=donotdistrub&amp;P-id=1746l1deAgef5915&amp;execpath1=Defult"><strong>Click Here</strong></a> to Unsubscribe</div>
     </div>
 </div>
 
 <div id="footer">
-	
+	<div class="footerdiv">
+    	<div class="socialdiv">
+        	<a href="https://twitter.com/crplindia/" target="_blank" class="socialicon tw" title="twitter"><img src="img/twitter.png" title="Twitter" alt="Twitter" width="54" height="43"></a>
+            <a href="https://www.facebook.com/crplindia1" target="_blank" class="socialicon fb" title="facebook"><img src="img/facebook.png" title="Facebook" alt="Facebook" width="54" height="43"></a>
+            <a href="https://plus.google.com/105410143212651847414/" target="_blank" class="socialicon gp" title="googleplus"><img src="img/googleplus.png" title="Googleplus" alt="Googleplus" width="54" height="43"></a>
+            <a href="https://in.linkedin.com/company/corporate-resources-crplindia-" target="_blank" class="socialicon ln" title="linkedin"><img src="img/linkedin.png" title="linkedin" alt="linkedin" width="54" height="43"></a>
+            <a href="https://www.youtube.com/crplindia" target="_blank" class="socialicon ut" title="youtube"><img src="img/youtube.png" title="Youtube" alt="Youtube" style="width:54px; height:43px;"></a>
+        </div>
+		
+        <div class="onethreediv">
+        	<div class="hline">
+            	<div class="htxt">Easy Navigation</div>
+            </div>
+            
+             <ul>
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="index37e1.html?actid=03&amp;path=About-us&amp;P-id=1746l1deAgef5915" title="About Us">About Us</a></li>
+                <li><a href="indexb021.html?actid=07&amp;path=Vision-Mission&amp;P-id=1746l1deAgef5915" title="Vision , Mission & Values">Mission & Vision</a></li>
+                <li><a href="indexc239.html?actid=013&amp;path=Director&amp;P-id=1746l1deAgef5915" title="From the Director's Desk">From the Director's Desk</a></li>
+                <li><a href="indexd8d8.html?actid=034&amp;path=Clientele&amp;P-id=1746l1deAgef5915" title="Clientele">Clients</a></li>
+                <li><a href="indexc115.html?actid=035&amp;path=Testimonials&amp;P-id=1746l1deAgef5915" title="Testimonials">Testimonials</a></li>
+                <li><a href="indexcaca.html?actid=021&amp;path=HR-Consulting&amp;P-id=1746l1deAgef5915" title="HR Consulting">HR Consulting</a></li>
+                <li><a href="index21c6.html?actid=011&amp;path=Future-Outlook&amp;P-id=1746l1deAgef5915" title="Future Outlook">Future Outlook</a></li>
+                <li><a href="index714c.html?actid=036&amp;path=Send-Suggestion&amp;P-id=1746l1deAgef5915" title="Send Suggestion">Feedback</a></li>
+                <li><a href="index714c.html?actid=036&amp;path=Send-Suggestion&amp;P-id=1746l1deAgef5915" title="Send Suggestion">Send Suggestion</a></li>
+                <li><a href="index175c.html?actid=02&amp;path=Report-Problem&amp;P-id=1746l1deAgef5915" title="Report a Problem">Report a Problem</a></li>
+                <li><a href="index122d.html?actid=037&amp;path=Contact-Us&amp;P-id=1746l1deAgef5915" title="Contact Us">Contact Us</a></li>
+                <li><a href="indexd9d7.html?actid=046&amp;path=FAQ&amp;P-id=1746l1deAgef5915" title="FAQ">FAQ</a></li>
+            </ul>
+            
+        </div>
+        <div class="onethreediv">
+        	<div class="hline">
+            	<div class="htxt">Find Your Job</div>
+            </div>
+            
+            <ul>
+                <li><a href="indexbb4d.html?actid=030&amp;path=Submit-Resume&amp;P-id=1746l1deAgef5915" title="Quick Upload">Quick Upload</a></li>
+                <li><a href="indexa464.html?actid=026&amp;path=Hotjob&amp;P-id=1746l1deAgef5915" title="Hotjob"> Hot Jobs</a></li>
+                <li><a href="index81d9.html?actid=028&amp;path=Jobs-By-Category&amp;P-id=1746l1deAgef5915" title="Job By Category"> Jobs by Category </a></li>
+                <li><a href="index1319.html?actid=029&amp;path=Jobs-By-Location&amp;P-id=1746l1deAgef5915" title="Job By Location"> Jobs By Location</a></li>
+                <li><a href="indexa464.html?actid=026&amp;path=Hotjob&amp;P-id=1746l1deAgef5915" title="Jobs by Client"> Jobs By Client</a></li>
+                <li><a href="indexe37d.html?actid=031&amp;path=Refer-Friend&amp;P-id=1746l1deAgef5915" title="Refer a Friend"> Refer a friend</a></li>
+                <li><a href="career/index.html" target="_blank" title="Career with us"> Career with us</a></li>
+                <li><a href="career/index0e9a.html?actid=014&amp;path=Current-Openings&amp;P-id=1746l1deAgef5915"target="_blank" title="Current Openings"> Current Openings</a></li>
+                <li><a href="http://www.crpljobs.com/" target="_blank" title="Crpljobs.com">Our Job portal</a></li>
+                <li><a href="http://www.resumebuzz.in/" target="_blank" title="Resume Buzz">Resume Buzz</a></li>
+                <li><a href="index8613.html?actid=032&amp;path=Employer&amp;P-id=1746l1deAgef5915" title="Employer" target="_blank">Employer's</a></li>
+                <li><a href="indexfcad.html?actid=033&amp;path=Submit-Requirement&amp;P-id=1746l1deAgef5915" title="Submit Requirement">Submit Requirment</a></li>
+                <li><a href="ourgroup/index.html" title="About our group" target="_blank">About our group</a></li>
+            </ul>
+            
+        </div>
+        <div class="onethreediv">
+        	<div class="hline">
+            	<div class="htxt">Career Help</div>
+            </div>
+
+            <ul>
+            	<li><a href="index711c.html?actid=047&amp;path=Job-Strategies-Tips&amp;P-id=1746l1deAgef5915" title="Job Strategies & Tips">Job Strategies & Tips</a></li>
+                <li><a href="index763f.html?actid=048&amp;path=Going-Interview&amp;P-id=1746l1deAgef5915" title="Going for an Interview">Going for an Interview</a></li>
+                <li><a href="indexd94b.html?actid=049&amp;path=Interview-Tips&amp;P-id=1746l1deAgef5915" title="Interview Tips">Interview Tips</a></li>
+                <li><a href="index243e.html?actid=051&amp;path=Effective-Resume&amp;P-id=1746l1deAgef5915" title="Effective Resume">Effective Resume</a></li>
+                <li><a href="index5cba.html?actid=052&amp;path=Resume-Tips&amp;P-id=1746l1deAgef5915" title="Resume Tips">Resume Tips</a></li>
+                <li><a href="index0c3b.html?actid=053&amp;path=Cover-LetterTips&amp;P-id=1746l1deAgef5915" title="Cover Letter Tips">Cover Letter Tips</a></li>
+                <li><a href="indexe521.html?actid=054&amp;path=Reason-Rejection&amp;P-id=1746l1deAgef5915" title="Reason of Rejection">10 reason of rejection</a></li>
+                <li><a href="index5c7b.html?actid=055&amp;path=Advice-student&amp;P-id=1746l1deAgef5915" title="Advice to student">Advice to student</a></li>
+                <li><a href="indexdcbe.html?actid=056&amp;path=Career-BPO&amp;P-id=1746l1deAgef5915" title="Career at BPO">Career at BPO's</a></li>
+                <li><a href="indexa7c3.html?actid=057&amp;path=Career-RPO&amp;P-id=1746l1deAgef5915" title="Career at RPO">Career at RPO's</a></li>
+                <li><a href="resume/index.html" target="_blank" title="Resume Development"><span>Resume Development</span></a></li>
+                <li><a href="mobile/index.html" title="Verify Mobile Number">Verify Mobile Number</a></li>
+                <li><a href="indexaedc.html?actid=062&amp;path=DoNot-Disturb&amp;execpath=donotdistrub&amp;P-id=1746l1deAgef5915&amp;execpath1=Defult" title="Do Not Disturb">Do Not Disturb</a></li>
+            </ul> 
+            
+        </div>
+        <div class="onethreediv">
+            <div class="hline">
+            	<div class="htxt">Other Links</div>
+            </div>
+            <ul>
+                <li><a href="index7bfb.html?actid=042&amp;path=You-re-GoodHand&amp;P-id=1746l1deAgef5915" title="You're in Good Hand">You're in Good Hand</a></li>
+                <li><a href="indexc115.html?actid=035&amp;path=Testimonials&amp;P-id=1746l1deAgef5915" title="Testimonials">Testimonials</a></li>
+                <li><a href="index1242.html?actid=015&amp;path=Recruitment-Process&amp;P-id=1746l1deAgef5915" title="Recruitment Process">Recruitment Process</a></li>
+                <li><a href="index88d2.html?actid=016&amp;path=Search&amp;P-id=1746l1deAgef5915" title="Search">Executive Search</a></li>
+                <li><a href="index9f6f.html?actid=017&amp;path=Selection&amp;P-id=1746l1deAgef5915" title="Selection">Selection Process</a></li>
+                <li><a href="index5374.html?actid=019&amp;path=Flexi-Staffing&amp;P-id=1746l1deAgef5915" title="Flexi Staffing">Flexi Staffing</a></li>
+                <li><a href="index5c2f.html?actid=020&amp;path=In-house-Services&amp;P-id=1746l1deAgef5915" title="In-house Services">In-house Services</a></li>
+                <li><a href="indexe253.html?actid=063&amp;path=Payroll-Processing&amp;P-id=1746l1deAgef5915" title="Payroll Processing">Payroll Processing</a></li>
+                <li><a href="indexd023.html?actid=064&amp;path=Statutory-Compliance-Outsourcing&amp;P-id=1746l1deAgef5915" title="Statutory Compliance Outsourcing">Statutory Compliance</a></li>
+                <li><a href="index8774.html?actid=065&amp;path=Recruitment-BackOffice-solutions&amp;P-id=1746l1deAgef5915" title="Back Office solutions">Back Office solutions</a></li>
+                <li><a href="index0ddb.html?actid=099&amp;path=Support&amp;P-id=1746l1deAgef5915" target="_blank" title="Support">Support</a></li>
+                <li><a href="blog/index.html" title="Our Blog" target="_blank">Our Blog</a></li>
+                <li><a href="index1d71.html?actid=100&amp;path=RSS&amp;P-id=1746l1deAgef5915" title="RSS">RSS Feed</a></li> 
+            </ul>
+           
+       
+      </div>
+      <div class="onethreediv flast">
+      		<div class="logo"><img src="img/crpl.png" alt="Crplindia.com"></div>
+            <p>
+            	<span class="white">Regd. Office</span><br>
+            	N-6/9, Nayapally, I.R.C. Village,<br>
+                Bhubaneswar-751015. Orissa<br>
+				Ph: <span class="no bold">0674-6574145-154</span>
+            </p> 
+            
+            <div class="map"><a href="https://goo.gl/maps/Hj7TbcHy75C2" title="Find us on Google" target="_blank"><img src="img/map.jpg" alt="Map" title="Map" ></a></div>
+            
+                        <form id="footersubscribe" action="http://www.crplindia.com/index.php?actid=73&amp;Path=Dynamic&amp;pth=027" method="post">
+            <input name="email" value="" type="email" style="width:74%!important; color:#FFF!important; background-color:transparent!important;" required placeholder="Subscribe Email" />
+                
+                <button title="Send" type="submit"><i class="fa fa-envelope-o"></i></button>
+                <input type="hidden" name="frm_action" value="1">
+                <input type="hidden" name="actid" value="73">
+                <input type="hidden" name="u_id" value="">
+                <input type="hidden" name="exec_path" value=""/>
+                </form>
+			        
+      </div>
+    </div>
     <div class="copyright">
         <div class="flink">
-        <a href="#" target="_blank" title="Disclaimer">Disclaimer</a>
+        <a href="indexc39a.html?actid=058&amp;path=Disclaimer&amp;P-id=1746l1deAgef5915" target="_blank" title="Disclaimer">Disclaimer</a>
         |
-        <a href="#" target="_blank" title="Privacy policy">Privacy policy</a>
+        <a href="indexb1a4.html?actid=059&amp;path=Privacy-policy&amp;P-id=1746l1deAgef5915" target="_blank" title="Privacy policy">Privacy policy</a>
         |
-        <a href="#" target="_blank" title="Terms of Use">Terms of Use</a>
+        <a href="index7ce1.html?actid=060&amp;path=Terms-of-Use&amp;P-id=1746l1deAgef5915" target="_blank" title="Terms of Use">Terms of Use</a>
         |
-        <a href="#" title="Site Map">Site Map</a>
+        <a href="index76da.html?actid=061&amp;path=Site-Map&amp;P-id=1746l1deAgef5915" title="Site Map">Site Map</a>
         </div>
-        <div class="copyrighttxt">&copy; Copyright : 2017 Campus Catalyst - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
+        <div class="copyrighttxt">&copy; Copyright : 2017 - <a href="index.html">Corporate Resources</a></div>
     </div>
 </div>
 <a href="#" class="scrollToTop"></a>
@@ -810,5 +766,5 @@ ga('send', 'pageview');
 
 	</body>
 
-
+<!-- Mirrored from www.crplindia.com/index.php?actid=027&path=Workwith-us&P-id=1746l1deAgef5915 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 May 2017 07:22:27 GMT -->
 </html>

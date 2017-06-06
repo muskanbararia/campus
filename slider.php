@@ -1,33 +1,5 @@
 <div class="mslider">
-	<div id="menu" class="normalmenu">
-    <div class="menudiv">
-        <div class="logo">
-        <a href="index.html"><img src="img/crpl.png"  title="Crplindia" alt="Crplindia.com"></a>
-        </div>
-        <div class="mainmenu">
-            <div id='cssmenu'>
-                <ul>
-                    <li><a href="index.html" title="Home"><i class="fa fa-home"></i><br /><span>Home</span></a></li>
-                    <li><a href="index37e1.html" title="About Us"><i class="fa fa-smile-o"></i><br /><span>About Us</span></a>
-                    
-                        </li>
-                        <li><a href="indexb036.html" title="Services"><i class="fa fa-gear"></i><br /><span>Services</span></a>
-                        
-                    </li>        
-                   
-                    <li><a href="resume.php" title="Submit-Resume"><i class="fa fa-file-text-o"></i><br /><span>Submit Resume</span></a>       	
-                    </li>
-                    <li><a href="emp.php" title="Employers"><i class="fa fa-group"></i><br /><span>Employers</span></a>
-                    
-                    </li>
-                    
-                    <li><a href="index122d.html" title="Contact Us"><span><i class="fa fa-envelope"></i><br />Contact Us</span></a></li>
-                </ul>
-            </div>
-        
-        </div>
-    </div>
-</div> 
+	<?php include "menu.php" ?>
     <div class="menuspace"></div>
     <div class="hotjob">
     	<div class="hotjobdiv">
