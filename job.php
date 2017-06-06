@@ -80,10 +80,10 @@
         $rec_count = $row_fetch[0];
         //Check for no. of pages left     echo"<script>alert('$page')</script>";
         if( isset($_GET['page'] ) ) {
-            $page = $_GET['page']+1;
+            $page = $_GET['page'];
             $page_up= $page + 1;
-            if($page>2)
-                $page_down = $page - 2;
+            if($page>1)
+                $page_down = $page - 1;
             else
                 $page_down = 0;
             //echo"<script>alert('DELETED YES')</script>";
@@ -102,11 +102,11 @@
         $run=mysqli_query($dbcon,$view_users_query);//here run the sql query.  
         while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
         {  
-            $title         =   $row[8];
-            $exp    =   $row[11]; 
+            $title      =   $row[8];
+            $exp        =   $row[11]; 
             $location   =   $row[12];
-            $detail =$row[9];
-            $company        =   $row[1]; 
+            $detail     =   $row[9];
+            $company    =   $row[1]; 
       ?>
        
         
