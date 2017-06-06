@@ -65,99 +65,102 @@
        <font color="#E98C0B" style="font-size:18px;"><b>Jobs Found</b></font>
        <?php
         
-                                include("./database/db_conection.php");
-                                //no.of listed packeges
-                                $id=0;  
-                                //Set limit of packages per page
-                                $rec_limit = 10;
-                                //Count of total packages
-                                $sql = "SELECT count(id) FROM employer";
-                                //Query to MySQL
-                                $retval = mysqli_query($dbcon,$sql);
-                                //Get total no. of rows
-                                $row_fetch = mysqli_fetch_array($retval);
-                                //First element of row[0]
-                                $rec_count = $row_fetch[0];
-                                //Check for no. of pages left                               echo"<script>alert('$page')</script>";
-                                if( isset($_GET['page'] ) ) {
-                                    $page = $_GET['page'] + 1;
-                                    //echo"<script>alert('DELETED YES')</script>";
-                                    $offset = $rec_limit * $page ;
-                                }
-                                else {
-                                    $page = 0;
-                                    //echo"<script>alert(' $page DELETED NO')</script>";
-                                    $offset = 0;
-                                }
-                                //No. of records left
-                                $left_rec = $rec_count - ($page * $rec_limit);
-                                $view_users_query="SELECT * from employer LIMIT $offset, $rec_limit";//select query for viewing users.  
-                                $run=mysqli_query($dbcon,$view_users_query);//here run the sql query.  
-                                while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
-                                {  
-                                    $title         =   $row[8];
-                                    $exp    =   $row[11]; 
-                                    $location   =   $row[12];
-                                    $detail =$row[9];
-                                    $company        =   $row[1]; 
-                                    
-
-                                    
-
-                                    
-                            ?>
+        include("./database/db_conection.php");
+        //no.of listed packeges
+        $id=0;  
+        //Set limit of packages per page
+        $rec_limit = 10;
+        //Count of total packages
+        $sql = "SELECT count(id) FROM employer";
+        //Query to MySQL
+        $retval = mysqli_query($dbcon,$sql);
+        //Get total no. of rows
+        $row_fetch = mysqli_fetch_array($retval);
+        //First element of row[0]
+        $rec_count = $row_fetch[0];
+        //Check for no. of pages left     echo"<script>alert('$page')</script>";
+        if( isset($_GET['page'] ) ) {
+            $page = $_GET['page'] + 1;
+            $page_down = $page - 2;
+            //echo"<script>alert('DELETED YES')</script>";
+            $offset = $rec_limit * $page ;
+        }
+        else {
+            $page = 0;
+            $page_down = 0;
+            //echo"<script>alert(' $page DELETED NO')</script>";
+            $offset = 0;
+        }
+        //No. of records left
+        $left_rec = $rec_count - ($page * $rec_limit);
+        $view_users_query="SELECT * from employer LIMIT $offset, $rec_limit";//select query for viewing users.  
+        $run=mysqli_query($dbcon,$view_users_query);//here run the sql query.  
+        while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
+        {  
+            $title         =   $row[8];
+            $exp    =   $row[11]; 
+            $location   =   $row[12];
+            $detail =$row[9];
+            $company        =   $row[1]; 
+      ?>
        
         
        </div>
-       
-       
-                	<div class="shortdetail">
-            	<div class="scontent">
-                <p><a href="index7dfd.php?actid=4&amp;path=Viewjob&amp;jobid=10953&amp;P-id=1746l1deAgef5915" target="_blank" class="sheadline" title="Service Engineer / Field Engineer "> <?php echo $title; ?> </a> <span>(<?php echo $exp; ?> Exp) 
-                 
-                </span></p>
-                <p><span><?php echo $company; ?></span></p>
-                <p><span><i class="fa fa-map-marker"></i> Location : <a onclick="#"><?php echo $location; ?></a></span></p>
-                <p><?php echo $detail; ?></p>
-                </div>
-                <div class="sviewdetail">
-                <span><a href="index7dfd.php?actid=4&amp;path=Viewjob&amp;jobid=10953&amp;P-id=1746l1deAgef5915" title="View More" target="_blank">View More</a> | <a href="index69d7.php?actid=26&amp;path=Similar-Jobs&amp;similarjobid=10953&amp;P-id=1746l1deAgef5915&amp;searchtype=SimilarJobs" title="View similar jobs" target="_blank">View similar jobs</a> 
-                                | <a href="index77eb.php?actid=071&amp;path=ApplyJob&amp;jobid=10953&amp;P-id=1746l1deAgef5915" title="Apply Now">Apply Now</a>
-                                </span>
-                
-                </div>
+       <div class="shortdetail">
+            <div class="scontent">
+            <p><a href="index7dfd.php?actid=4&amp;path=Viewjob&amp;jobid=10953&amp;P-id=1746l1deAgef5915" target="_blank" class="sheadline" title="Service Engineer / Field Engineer "> <?php echo $title; ?> </a> <span>(<?php echo $exp; ?> Exp) 
+             
+            </span></p>
+            <p><span><?php echo $company; ?></span></p>
+            <p><span><i class="fa fa-map-marker"></i> Location : <a onclick="#"><?php echo $location; ?></a></span></p>
+            <p><?php echo $detail; ?></p>
+            </div>
+            <div class="sviewdetail">
+                <span>
+                    <a href="index7dfd.php?actid=4&amp;path=Viewjob&amp;jobid=10953&amp;P-id=1746l1deAgef5915" title="View More" target="_blank">View More</a> | 
+                    <a href="index69d7.php?actid=26&amp;path=Similar-Jobs&amp;similarjobid=10953&amp;P-id=1746l1deAgef5915&amp;searchtype=SimilarJobs" title="View similar jobs" target="_blank">View similar jobs</a> | 
+                    <a href="index77eb.php?actid=071&amp;path=ApplyJob&amp;jobid=10953&amp;P-id=1746l1deAgef5915" title="Apply Now">Apply Now</a>
+                </span>
+            </div>
                 <?php } ?>
             </div>
-           
-                  
-                  
-           
-                        <link rel="stylesheet" type="text/css" href="css/pagination_style.css" />
-           <div style="padding-right:12px;">
-            	
-                <font style=" font-size:13px;">	<div id="pagination_bottom">
-<ul>
-<li  class="selected"><a href="index3125.html?page=1&amp;actid=026&amp;execpath=&amp;path=1746l1deAgef5915&amp;keyword=&amp;fun_area=&amp;total_exp_from=&amp;annual_ctc_min=&amp;annual_ctc_max=&amp;one_d_old=&amp;three_d_old=&amp;seven_d_old=&amp;fiftin_d_old=&amp;thirty_d_old=&amp;zero_three=&amp;three_six=&amp;six_ten=&amp;ten_fiftin=&amp;fiftin_tntfive=&amp;tntfive_thirty=&amp;loc_name=&amp;job_role=&amp;fun_name=&amp;indus_name=&amp;degree_name=&amp;temp_job=&amp;cont_job=&amp;pmt_job=&amp;walkin_job=">1</a></li>
-<li ><a href="indexe14c.html?page=2&amp;actid=026&amp;execpath=&amp;path=1746l1deAgef5915&amp;keyword=&amp;fun_area=&amp;total_exp_from=&amp;annual_ctc_min=&amp;annual_ctc_max=&amp;one_d_old=&amp;three_d_old=&amp;seven_d_old=&amp;fiftin_d_old=&amp;thirty_d_old=&amp;zero_three=&amp;three_six=&amp;six_ten=&amp;ten_fiftin=&amp;fiftin_tntfive=&amp;tntfive_thirty=&amp;loc_name=&amp;job_role=&amp;fun_name=&amp;indus_name=&amp;degree_name=&amp;temp_job=&amp;cont_job=&amp;pmt_job=&amp;walkin_job=">2</a></li>
-<li ><a href="index4135.html?page=3&amp;actid=026&amp;execpath=&amp;path=1746l1deAgef5915&amp;keyword=&amp;fun_area=&amp;total_exp_from=&amp;annual_ctc_min=&amp;annual_ctc_max=&amp;one_d_old=&amp;three_d_old=&amp;seven_d_old=&amp;fiftin_d_old=&amp;thirty_d_old=&amp;zero_three=&amp;three_six=&amp;six_ten=&amp;ten_fiftin=&amp;fiftin_tntfive=&amp;tntfive_thirty=&amp;loc_name=&amp;job_role=&amp;fun_name=&amp;indus_name=&amp;degree_name=&amp;temp_job=&amp;cont_job=&amp;pmt_job=&amp;walkin_job=">3</a></li>
-<li ><a href="index6fd7.html?page=4&amp;actid=026&amp;execpath=&amp;path=1746l1deAgef5915&amp;keyword=&amp;fun_area=&amp;total_exp_from=&amp;annual_ctc_min=&amp;annual_ctc_max=&amp;one_d_old=&amp;three_d_old=&amp;seven_d_old=&amp;fiftin_d_old=&amp;thirty_d_old=&amp;zero_three=&amp;three_six=&amp;six_ten=&amp;ten_fiftin=&amp;fiftin_tntfive=&amp;tntfive_thirty=&amp;loc_name=&amp;job_role=&amp;fun_name=&amp;indus_name=&amp;degree_name=&amp;temp_job=&amp;cont_job=&amp;pmt_job=&amp;walkin_job=">4</a></li>
-<li ><a href="indexa5d4.html?page=5&amp;actid=026&amp;execpath=&amp;path=1746l1deAgef5915&amp;keyword=&amp;fun_area=&amp;total_exp_from=&amp;annual_ctc_min=&amp;annual_ctc_max=&amp;one_d_old=&amp;three_d_old=&amp;seven_d_old=&amp;fiftin_d_old=&amp;thirty_d_old=&amp;zero_three=&amp;three_six=&amp;six_ten=&amp;ten_fiftin=&amp;fiftin_tntfive=&amp;tntfive_thirty=&amp;loc_name=&amp;job_role=&amp;fun_name=&amp;indus_name=&amp;degree_name=&amp;temp_job=&amp;cont_job=&amp;pmt_job=&amp;walkin_job=">5</a></li>
-<li ><a href="indexf9bb.html?page=6&amp;actid=026&amp;execpath=&amp;path=1746l1deAgef5915&amp;keyword=&amp;fun_area=&amp;total_exp_from=&amp;annual_ctc_min=&amp;annual_ctc_max=&amp;one_d_old=&amp;three_d_old=&amp;seven_d_old=&amp;fiftin_d_old=&amp;thirty_d_old=&amp;zero_three=&amp;three_six=&amp;six_ten=&amp;ten_fiftin=&amp;fiftin_tntfive=&amp;tntfive_thirty=&amp;loc_name=&amp;job_role=&amp;fun_name=&amp;indus_name=&amp;degree_name=&amp;temp_job=&amp;cont_job=&amp;pmt_job=&amp;walkin_job=">6</a></li>
-<li ><a href="index5b69.html?page=7&amp;actid=026&amp;execpath=&amp;path=1746l1deAgef5915&amp;keyword=&amp;fun_area=&amp;total_exp_from=&amp;annual_ctc_min=&amp;annual_ctc_max=&amp;one_d_old=&amp;three_d_old=&amp;seven_d_old=&amp;fiftin_d_old=&amp;thirty_d_old=&amp;zero_three=&amp;three_six=&amp;six_ten=&amp;ten_fiftin=&amp;fiftin_tntfive=&amp;tntfive_thirty=&amp;loc_name=&amp;job_role=&amp;fun_name=&amp;indus_name=&amp;degree_name=&amp;temp_job=&amp;cont_job=&amp;pmt_job=&amp;walkin_job=">7</a></li>
-<li ><a href="indexe499.html?page=8&amp;actid=026&amp;execpath=&amp;path=1746l1deAgef5915&amp;keyword=&amp;fun_area=&amp;total_exp_from=&amp;annual_ctc_min=&amp;annual_ctc_max=&amp;one_d_old=&amp;three_d_old=&amp;seven_d_old=&amp;fiftin_d_old=&amp;thirty_d_old=&amp;zero_three=&amp;three_six=&amp;six_ten=&amp;ten_fiftin=&amp;fiftin_tntfive=&amp;tntfive_thirty=&amp;loc_name=&amp;job_role=&amp;fun_name=&amp;indus_name=&amp;degree_name=&amp;temp_job=&amp;cont_job=&amp;pmt_job=&amp;walkin_job=">8</a></li>
-<li ><a href="indexed09.html?page=9&amp;actid=026&amp;execpath=&amp;path=1746l1deAgef5915&amp;keyword=&amp;fun_area=&amp;total_exp_from=&amp;annual_ctc_min=&amp;annual_ctc_max=&amp;one_d_old=&amp;three_d_old=&amp;seven_d_old=&amp;fiftin_d_old=&amp;thirty_d_old=&amp;zero_three=&amp;three_six=&amp;six_ten=&amp;ten_fiftin=&amp;fiftin_tntfive=&amp;tntfive_thirty=&amp;loc_name=&amp;job_role=&amp;fun_name=&amp;indus_name=&amp;degree_name=&amp;temp_job=&amp;cont_job=&amp;pmt_job=&amp;walkin_job=">9</a></li>
-<li class="nextPage"><a href="indexe14c.html?page=2&amp;actid=026&amp;execpath=&amp;path=1746l1deAgef5915&amp;keyword=&amp;fun_area=&amp;total_exp_from=&amp;annual_ctc_min=&amp;annual_ctc_max=&amp;one_d_old=&amp;three_d_old=&amp;seven_d_old=&amp;fiftin_d_old=&amp;thirty_d_old=&amp;zero_three=&amp;three_six=&amp;six_ten=&amp;ten_fiftin=&amp;fiftin_tntfive=&amp;tntfive_thirty=&amp;loc_name=&amp;job_role=&amp;fun_name=&amp;indus_name=&amp;degree_name=&amp;temp_job=&amp;cont_job=&amp;pmt_job=&amp;walkin_job="><img alt="Next" onmouseover="this.src='img/next_hover.gif';" onmouseout="this.src='img/next.gif';" src="img/next.gif" border="0" /></a></li>
-<li class="nextPage"><a href="index1718.html?page=217&amp;actid=026&amp;execpath=&amp;path=1746l1deAgef5915&amp;keyword=&amp;fun_area=&amp;total_exp_from=&amp;annual_ctc_min=&amp;annual_ctc_max=&amp;one_d_old=&amp;three_d_old=&amp;seven_d_old=&amp;fiftin_d_old=&amp;thirty_d_old=&amp;zero_three=&amp;three_six=&amp;six_ten=&amp;ten_fiftin=&amp;fiftin_tntfive=&amp;tntfive_thirty=&amp;loc_name=&amp;job_role=&amp;fun_name=&amp;indus_name=&amp;degree_name=&amp;temp_job=&amp;cont_job=&amp;pmt_job=&amp;walkin_job="><img alt="Last" onmouseover="this.src='img/next_hover.gif';" onmouseout="this.src='img/next.gif';" src="img/next.gif" border="0" /><img alt="Last" onmouseover="this.src='img/next_hover.gif';" onmouseout="this.src='img/next.gif';" src="img/next.gif" border="0" /></a></li>
-</ul>
-</div> </font>
+           <link rel="stylesheet" type="text/css" href="css/pagination_style.css" />
+           <!--div style="padding-right:12px;">
+            <font style=" font-size:13px;">	<div id="pagination_bottom">
+            <ul>
+            <li  class="selected">
+            <a href="">1</a>
+            </li>
+            <li class="nextPage">
+            <a href="">
+            <img alt="Next" onmouseover="this.src='img/next_hover.gif';" onmouseout="this.src='img/next.gif';" src="img/next.gif" border="0" />
+            </a>
+            </li>
+            <li class="nextPage">
+            <a href="">
+            <img alt="Last" onmouseover="this.src='img/next_hover.gif';" onmouseout="this.src='img/next.gif';" src="img/next.gif" border="0" />
+            <img alt="Last" onmouseover="this.src='img/next_hover.gif';" onmouseout="this.src='img/next.gif';" src="img/next.gif" border="0" />
+            </a></li>
+            </ul>
+            </div> 
+            </font>
             </div>
             <br />
-            
            <br /> 
+        </div-->
+            <div style="padding-right:12px;">
+                <div style="float: left;">
+                    <a href="job.php?page=<??>">
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                </div>
+                <div style="float: right;">
+                    <a href="job.php?page=<?=$page?>">
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
+            </div>
+            </div>
         </div>
-        
-       
-        
         
         
         <div class="fivethree">
