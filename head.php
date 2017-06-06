@@ -20,6 +20,7 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,700' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="js/modernizr.js"></script>
 <noscript><link rel="stylesheet" type="text/css" href="css/styleNoJS.css" /></noscript>
 <script type="text/javascript" defer="defer" src="js/menuscript.js"></script>

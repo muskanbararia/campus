@@ -13,19 +13,19 @@
             <div class="login"><a href="./login.php"  target="_blank" title="Employee Login"><i class="fa fa-sign-in"></i>Login</a></div>
             <div class="login"><a href="./register.php"  target="_blank" title="Employee Login"><i class="fa fa-sign-in"></i>Register</a></div>
             </div>
-                                    <?php else: ?>
-                                        <?php 
-                                        include("database/db_conection.php");          
-                                        $email=$_SESSION['user'];
-                                        $view_users_query="SELECT * from user WHERE email='$email' LIMIT 1";//select query for viewing users.  
-                                        $run=$dbcon->query($view_users_query);//here run the sql query.  
-                                  
-                                        if($row=$run->fetch_array())//while look to fetch the result and store in a array $row.  
-                                        {  
-                                            $user_name=$row[1];
-                                        }
-                                        ?>
-                                        <div class="topright1">
+                <?php else: ?>
+                    <?php 
+                    include("database/db_conection.php");          
+                    $email=$_SESSION['user'];
+                    $view_users_query="SELECT * from user WHERE email='$email' LIMIT 1";//select query for viewing users.  
+                    $run=$dbcon->query($view_users_query);//here run the sql query.  
+                
+                    if($row=$run->fetch_array())//while look to fetch the result and store in a array $row.  
+                    {  
+                        $user_name=$row[1];
+                    }
+                ?>
+                <div class="topright1">
             <div class="login"><a href="#"  target="_blank" title="Employee Login"><i class="fa fa-sign-in"></i><?php echo "Hello, $user_name"; ?></a></div>
             <div class="login"><a href="./logout.php"  ><i class="fa fa-sign-in"></i>Logout</a></div>
             </div>
