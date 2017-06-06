@@ -547,22 +547,7 @@ font-size:20px;
 </div>
 <div class="container-2">
      <div id="page-wrapper">   
-      <div class="row">
-     <div class="col-md-12">
-      <div class="page-title">
-       <h2>Dashboard<small>Content Overview</small></h2>
-        <ol class="breadcrumb">
-         <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
-          <li class="pull-right">
-           <div id="reportrange" class="btn btn-green btn-square date-picker">
-            <i class="fa fa-calendar"></i>
-             <span class="date-range">February 15, 2017 - March 16, 2017</span> <i class="fa fa-caret-down"></i>
-           </div>
-          </li>
-        </ol>
-       </div>
-      </div>
-     </div> 
+       
                                                  
         <div class="row" >
                     <div class="col-lg-2 col-sm-6">
