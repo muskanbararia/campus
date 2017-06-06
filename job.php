@@ -80,13 +80,18 @@
         $rec_count = $row_fetch[0];
         //Check for no. of pages left     echo"<script>alert('$page')</script>";
         if( isset($_GET['page'] ) ) {
-            $page = $_GET['page'] + 1;
-            $page_down = $page - 2;
+            $page = $_GET['page']+1;
+            $page_up= $page + 1;
+            if($page>2)
+                $page_down = $page - 2;
+            else
+                $page_down = 0;
             //echo"<script>alert('DELETED YES')</script>";
             $offset = $rec_limit * $page ;
         }
         else {
             $page = 0;
+            $page_up=1;
             $page_down = 0;
             //echo"<script>alert(' $page DELETED NO')</script>";
             $offset = 0;
@@ -148,18 +153,31 @@
             <br />
            <br /> 
         </div-->
+            <?php
+                if ($left_rec > 0) {
+                    # code...
+            ?>
             <div style="padding-right:12px;">
                 <div style="float: left;">
-                    <a href="job.php?page=<?$page_down?>">
+                    <a href="job.php?page=<?=$page_down?>">
                         <i class="fa fa-chevron-left"></i>
                     </a>
                 </div>
                 <div style="float: right;">
-                    <a href="job.php?page=<?=$page?>">
+                    <a href="job.php?page=<?=$page_up?>">
                         <i class="fa fa-chevron-right"></i>
                     </a>
+                </div>
             </div>
+            <?}else{?>
+            <div style="padding-right:12px;">
+                <div style="float: left;">
+                    <a href="job.php?page=<?=$page_down?>">
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                </div>
             </div>
+            <?}?>
         </div>
         
         
