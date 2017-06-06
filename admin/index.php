@@ -513,7 +513,7 @@ font-size:20px;
             <div id='cssmenu'>
                 <ul>
                     <li><a href="index.php" title="Home"><i class="fa fa-home"></i><br /><span>Home</span></a></li>
-                    <li><a href="about.php" title="About Us"><i class="fa fa-smile-o"></i><br /><span>About Us</span></a>
+                    <li><a href="user.php" title="About Us"><i class="fa fa-smile-o"></i><br /><span>Users</span></a>
                     
                         </li>
                         <li><a href="services.php" title="Services"><i class="fa fa-gear"></i><br /><span>Services</span></a>
