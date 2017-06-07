@@ -1,4 +1,4 @@
-<div id="menu" class="normalmenu">
+ <div id="menu" class="normalmenu">
     <div class="menudiv">
         <div class="logo">
         <a href="index.php"><img src="img/crpl.png"  title="Crplindia" alt="Crplindia.com"></a>
@@ -13,9 +13,18 @@
                         <li><a href="services.php" title="Services"><i class="fa fa-gear"></i><br /><span>Services</span></a>
                         
                     </li>        
-                   
-                    <li><a href="resume.php" title="Submit-Resume"><i class="fa fa-file-text-o"></i><br /><span>Submit Resume</span></a>       	
+                   <?php
+
+                    if (!isset($_SESSION['user'])): ?> 
+                                          
+                                           
+                       <?php else: ?>
+                           <li><a href="resume.php" title="Submit-Resume"><i class="fa fa-file-text-o"></i><br /><span>Submit Resume</span></a>         
                     </li>
+                       
+                                                
+                   <?php endif; ?>
+                    
                     <li><a href="emp.php" title="Employers"><i class="fa fa-group"></i><br /><span>Employers</span></a>
                     
                     </li>
