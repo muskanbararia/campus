@@ -1735,7 +1735,7 @@ We make sure that the exercise of Sharing Your Requirement will be a beneficial 
                             <div class="ac50">
                             <select name="yrs" size="1">
                             <option value="">Minmum</option>
-                                                        <option value="Fresher" >Fresher</option>
+                                                        <option value="0" >Fresher</option>
                                                         <option value="0" >0</option>
                                                         <option value="1" >1</option>
                                                         <option value="2" >2</option>
@@ -2113,8 +2113,8 @@ We make sure that the exercise of Sharing Your Requirement will be a beneficial 
                         <li>
                         <div class="ac50">
     <select name="ctc_min">
-    <option value="">Min Salary</option>
-    <option value="Less than 50000">Less than 50000</option>
+    <option value="0">Min Salary</option>
+    <option value="49000">Less than 50000</option>
     <option value="50000">50,000</option>
     <option value="60000">60,000</option>
     <option value="70000">70,000</option>
@@ -2165,7 +2165,7 @@ We make sure that the exercise of Sharing Your Requirement will be a beneficial 
     </div>
     <div class="aclast50">
     <select name="ctc_max">
-    <option value="">Max Salary</option>
+    <option value="0">Max Salary</option>
     <option value="50000">50,000</option>
     <option value="60000">60,000</option>
     <option value="70000">70,000</option>
@@ -2635,13 +2635,13 @@ We make sure that the exercise of Sharing Your Requirement will be a beneficial 
                     $start=$_POST['start'];
                     $end=$_POST['end'];
                     $time=$start."-".$end;
-
-
-                    
-                    
+                    $time_post=date("Y-m-d H:i:s",time());
 
                     
-                    $insert_package="INSERT INTO employer VALUES (NULL,'$company','$name','$desig','$phone','$email','$address','$web','$job_title','$job_desc','$no_of_pos','$min_exp','$job_loc','$salary','$sal_det','$profile','$ug_qual','$pg_qual','$time','Anyday')";  
+                    
+
+                    
+                    $insert_package="INSERT INTO employer VALUES (NULL,'$company','$name','$desig','$phone','$email','$address','$web','$job_title','$job_desc','$no_of_pos','$yrs','$job_loc','$min','$sal_det','$profile','$ug_qual','$pg_qual','$time','Anyday','$months','$max','$time_post')";  
 
 
                     if($dbcon->query($insert_package))  

@@ -117,8 +117,8 @@ font-size:20px;
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
                     <th>Age</th>
                     <th>Start date</th>
                     <th>Salary</th>
