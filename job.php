@@ -48,7 +48,7 @@
                
                 <div class="sdsddd">
                 
-                <?php include "by-freshness.php" ?>
+                
                 <?php include "by-salary.php" ?>
                 <?php include "by-edu.php" ?>
                  

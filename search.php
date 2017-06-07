@@ -1,6 +1,6 @@
 <div class="fulldiv">
                 <form  action="#" method="post">
-                <div class="div100">Keywords<br><input name="keyword"  required value="" placeholder="Enter a keyword" type="text"></div>
+                
                 <div class="div100">Location <br> <select name="job_loc" data-placeholder="Select City"  class="chzn-select"  tabindex="18" id="multiple-label-example"  >
                             <option value="">---Select City---</option>
                                                         <option style="font-weight:bold; background-color:#E1E9F7; " disabled="disabled" value="16" >---- Top Metropolitan Cities---- </option>
