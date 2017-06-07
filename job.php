@@ -157,7 +157,7 @@
                 if ($left_rec > 0) {
                     # code...
             ?>
-            <div style="padding-right:12px;">
+            <div style="padding-right:20px;">
                 <div style="float: left;">
                     <a href="job.php?page=<?=$page_down?>">
                         <i class="fa fa-chevron-left"></i>
@@ -170,7 +170,7 @@
                 </div>
             </div>
             <?}else{?>
-            <div style="padding-right:12px;">
+            <div style="padding-right:20px;">
                 <div style="float: left;">
                     <a href="job.php?page=<?=$page_down?>">
                         <i class="fa fa-chevron-left"></i>
