@@ -98,7 +98,18 @@
         }
         //No. of records left
         $left_rec = $rec_count - ($page * $rec_limit);
-        $view_users_query="SELECT * from employer LIMIT $offset, $rec_limit";//select query for viewing users.  
+        if(isset($_POST['search']))
+        {
+            $loc = $_POST['jobLoc'];
+            $area = $_POST['fun_area'];
+            $exp = $_POST['total_exp_from'];
+            $ctc_min = $_POST['annual_ctc_min'];
+            $ctc_max = $_POST['annual_ctc_max'];
+            $view_users_query="SELECT * from employer WHERE job_loc='$loc' OR  work_exp_min = $exp  LIMIT $offset, $rec_limit";//select query for viewing users.
+        }
+        else{
+            $view_users_query="SELECT * from employer LIMIT $offset, $rec_limit";
+        }  
         $run=mysqli_query($dbcon,$view_users_query);//here run the sql query.  
         while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
         {  $id=$row[0];
@@ -130,29 +141,6 @@
                 <?php } ?>
             </div>
            <link rel="stylesheet" type="text/css" href="css/pagination_style.css" />
-           <!--div style="padding-right:12px;">
-            <font style=" font-size:13px;">	<div id="pagination_bottom">
-            <ul>
-            <li  class="selected">
-            <a href="">1</a>
-            </li>
-            <li class="nextPage">
-            <a href="">
-            <img alt="Next" onmouseover="this.src='img/next_hover.gif';" onmouseout="this.src='img/next.gif';" src="img/next.gif" border="0" />
-            </a>
-            </li>
-            <li class="nextPage">
-            <a href="">
-            <img alt="Last" onmouseover="this.src='img/next_hover.gif';" onmouseout="this.src='img/next.gif';" src="img/next.gif" border="0" />
-            <img alt="Last" onmouseover="this.src='img/next_hover.gif';" onmouseout="this.src='img/next.gif';" src="img/next.gif" border="0" />
-            </a></li>
-            </ul>
-            </div> 
-            </font>
-            </div>
-            <br />
-           <br /> 
-        </div-->
             <?php
                 if ($left_rec > 0) {
                     # code...
