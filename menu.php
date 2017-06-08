@@ -33,8 +33,8 @@
                         <li><a href="job.php" title="Hotjob"><span>Hot Jobs</span></a></li>
                         <li><a href="work-with-us.php" title="Work With Us"><span>Work With Us</span></a></li>
                         <li><a href="career.php" target="_blank" title="Career With Us"><span>Career With Us</span></a></li>
-                        <li><a href="job-by-cat.php" title="Job By Category"><span>Job By Category</span></a></li>
-                        <li><a href="job-by-loc.php" title="Job By Location"><span>Job By Location</span></a></li>
+                        <!--<li><a href="job-by-cat.php" title="Job By Category"><span>Job By Category</span></a></li>
+                        <li><a href="job-by-loc.php" title="Job By Location"><span>Job By Location</span></a></li>-->
                         </ul>
                     </li>
                     

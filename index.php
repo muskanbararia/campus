@@ -758,14 +758,7 @@ function validate(frm)
         </div>
 	</div>
 
-    <div class="fulldiv">
-        <div class="textbox">&nbsp;</div>
-        <div class="inputbox">
-        <input type="checkbox" id="j" required checked="checked" name="trh_sms" value="Yes"  />
-            <label for="j"><span></span>   I agree with 
-            <a href="index1c3c.html?actid=60&amp;path=Terms-Use&amp;&amp;P-id=1746l1deAgef5915" target="_blank" class="cpl1">Terms & Condition</a> to recieve Jobs Alerts through SMS &amp; Mail</label>
-        </div>
-	</div>
+    
     <div class="fulldiv">
         <div class="textbox">&nbsp;</div>
         <div class="inputbox">
