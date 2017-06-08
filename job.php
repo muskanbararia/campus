@@ -108,7 +108,7 @@
             $view_users_query="SELECT * from employer WHERE job_loc='$loc' OR  work_exp_min = $exp  LIMIT $offset, $rec_limit";//select query for viewing users.
         }
         else{
-            $view_users_query="SELECT * from employer LIMIT $offset, $rec_limit";
+            $view_users_query="SELECT * from employer WHERE status='1' LIMIT $offset, $rec_limit";
         }  
         $run=mysqli_query($dbcon,$view_users_query);//here run the sql query.  
         while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
@@ -124,7 +124,7 @@
        </div>
        <div class="shortdetail">
             <div class="scontent">
-            <p><a href="index7dfd.php?actid=4&amp;path=Viewjob&amp;jobid=10953&amp;P-id=1746l1deAgef5915" target="_blank" class="sheadline" title="Service Engineer / Field Engineer "> <?php echo $title; ?> </a> <span>(<?php echo $exp; ?> Exp) 
+            <p><a href="index7dfd.php?actid=4&amp;path=Viewjob&amp;jobid=10953&amp;P-id=1746l1deAgef5915" target="_blank" class="sheadline" title="Service Engineer / Field Engineer "> <?php echo $title; ?> </a> <span>(<?php echo $exp; ?> Months Exp) 
              
             </span></p>
             <p><span><?php echo $company; ?></span></p>
