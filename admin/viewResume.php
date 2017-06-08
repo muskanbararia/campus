@@ -32,33 +32,16 @@ margin: 3px 0 3px 5px;
 font-size:20px;
 }
 .button {
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  box-shadow: 0 2px #999;
-  float: left;
-  padding: 2px;
-  margin: 2px;
-}
-
-.button:hover {background-color: #3e8e41}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    float: right;
+    background-color: blue;
+    border: 3px solid green;
 }
 </style>
 <?php  session_start();  ?>
 <body>
 <div id="top">
-	<div class="topdiv">
-    	<div class="topleft">
+  <div class="topdiv">
+      <div class="topleft">
         <div class="topleft1 hide"><i class="fa fa-envelope-o"></i> <a href="mailto:info@campuscatalyst.com"><img src="../img/email.png"></a></div>
         <div class="topleft1"><i class="fa fa-phone"></i> <span class="no">+91-8073431088</span></div>
         </div>
@@ -74,12 +57,12 @@ font-size:20px;
                                          
             <?php endif; ?>
 
-        	
-        	<div class="topright1">
+          
+          <div class="topright1">
             <span>
             <a href="#" title="Report a Problem"><span class="cplff">Report a Problem</span></a></span>
             <ul>
-            	<li><a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#" title="Google Plus" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                 <li><a href="#" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
@@ -91,7 +74,7 @@ font-size:20px;
 </div>
   
 <div class="mform-middle">
-	<div id="menu" class="normalmenu">
+  <div id="menu" class="normalmenu">
     <div class="menudiv">
         <div class="logo">
         <a href="../index.php"><img src="../img/crpl.png"  title="Crplindia" alt="Crplindia.com"></a>
@@ -107,7 +90,7 @@ font-size:20px;
                         
                     </li>        
                    
-                    <li><a href="resume.php" title="Submit-Resume"><i class="fa fa-file-text-o"></i><br /><span>Submit Resume</span></a>       	
+                    <li><a href="resume.php" title="Submit-Resume"><i class="fa fa-file-text-o"></i><br /><span>Submit Resume</span></a>        
                     </li>
                     <li><a href="emp.php" title="Employers"><i class="fa fa-group"></i><br /><span>Employers</span></a>
                     
@@ -130,70 +113,92 @@ font-size:20px;
     </div>
 </div> 
     <div class="menuspace"></div>
-	<div class="bgimg"><img src="../img/topbg.jpg" title="Crpl" alt="Crpl"></div>
+  <div class="bgimg"><img src="../img/topbg.jpg" title="Crpl" alt="Crpl"></div>
 </div>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
 <div style="background-color: white;">
-    <table id="example" class="display" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Mobile</th>
-                    <th>Password</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Mobile</th>
-                    <th>Password</th>
-                    <th>Action</th>
-                </tr>
-            </tfoot>
-            <tbody>
-                <?php 
-                    include("../database/db_conection.php");
+        <?php
+        
+        include("../database/db_conection.php");
+        if(isset($_POST['resumeView'])){
+            $id = $_POST['email'];
+        }
+        else{
+            echo "<script>alert('Error')</script>";
+            echo "<script>window.open('./user.php','_self')</script> ";
+        }
+            $viewResume="SELECT * from resume WHERE email='$id'";//select query for viewing users.  
+            $run= $dbcon->query($viewResume);
+            //echo "<script>alert('$id')</script>";
+            while ($row = $run->fetch_assoc())
+            {  
+                //echo "<script>alert('Error3')</script>";
+                $i         =   $row['id'];
+                $name       =   $row['name'];
+                $exp        =   $row['work_exp']; 
+                $email      =   $row['email'];
+                $mobile     =   $row['mobile'];
+                $qual       =   $row['qual'];
+                $spec       =   $row['spec'];
+                $gender     =   $row['gender'];
+                $country    =   $row['country'];
+                $cty        =   $row['city']; 
+                $aoi        =   $row['aoi'];
+                $sal        =   $row['salary'];
+            }
+          ?>
+<div class="middle">
+    <div class="middlediv">
+        <div class="smallspace"></div>
+        <div class="fivefour">
+            <div class="largedetail">
+                <div class="largebox"> 
+                    <div class="largecontent" style="background-color:#f4f4f4">
+                        <div class="smallheadline"><?=$name?></div>
+                        <p>
+                            <?=$gender?>
+                            <br>
+                            <span class="lighttxt"><i class="fa fa-map-marker"></i> E-mail : 
+                                <span class="green"><?=$email?> </span> 
+                            </span>
+                        </p>
+                        <p>Experience :  <?=$exp?></p>
+                     
+                        <div>&nbsp; <b>&#8377;</b> &nbsp;<?=$sal?></div>  
+                    </div>
+                    <div class="socialbox" style="background-color:#f4f4f4"></div>
+                </div>
+                
+                <div class="fulldiv">
+                    <div class="headline1" > <span class="cpl1">Details</span></div>
+                        
+                    <div class="acform">
+                        <p> MOBILE :  <?=$mobile?> </p> 
+                        <ul>
+                        <li>Country :</li>
+                        <li><?=$country ?></li>
+                        </ul>
+                        <ul>
+                        <li>City :</li>
+                        <li><?=$cty ?>  </li>
+                        </ul>
+                    </div>      
+                </div>
+               
+            <div class="headline1"><span class="cpl1">Qualification</span></div>
+            <div class="acform">
+                <ul>
+                    <li>Qulification: </li>
+                    <li><?=$qual?> </li>
+               </ul>
+                <ul>
+                    <li>Area Of Interest: </li>
+                    <li><?=$aoi?> </li>
+               </ul>              
+            </div>       
+            <div><a href="user.php">Back</a></div>  
+            
 
-                    $get_users = "SELECT * FROM user";
-                    $run= $dbcon->query($get_users);
-                    while ($row = $run->fetch_assoc()) {
-                        # code...
-                        $name = $row['name'];
-                        $mobile = $row['mobile'];
-                        $email = $row['email'];
-                        $Password = $row['password'];
-                        $id = $row['id'];
-                    
-                ?>
-                <tr>
-                    <td><?=$name?></td>
-                    <td><?=$email?></td>
-                    <td><?=$mobile?></td>
-                    <td><?=$password?></td>
-                    <td>
-                        <form action="viewResume.php" method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="email" value="<?=$email?>">
-                            <button class="button" type="submit" name="resumeView">View Resume</button>
-                        </form>
-                        <form action="delUser.php" method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="id" value="<?=$id?>">
-                            <button class="button" type="submit" name="delUser">Delete User</button>
-                        </form>
-                    </td>
-                </tr>
-                <?}?>
-            </tbody>
-        </table>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('#example').DataTable();
-            } );
-        </script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    </div>
 </div>
 
 
