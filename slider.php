@@ -11,7 +11,7 @@
             </div>
             <div class="hotjobdiv2"></div>
             <div class="hotjobdiv1">
-            	<a href="indexbb4d.html">
+            	<a href="#">
                     <div class="hotjobdiv12"><i class="fa fa-edit"></i></div>
                     <div class="hotjobdiv14"><span>SUBMIT RESUME</span><br>Comprehense your Resume</div>
                 </a>

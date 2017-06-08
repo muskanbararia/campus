@@ -2657,7 +2657,7 @@ We make sure that the exercise of Sharing Your Requirement will be a beneficial 
                     
 
                     
-                    $insert_package="INSERT INTO employer VALUES (NULL,'$company','$name','$desig','$phone','$email','$address','$web','$job_title','$job_desc','$no_of_pos','$yrs','$job_loc','$min','$sal_det','$profile','$ug_qual','$pg_qual','$time','Anyday','$months','$max','$time_post')";  
+                    $insert_package="INSERT INTO employer VALUES (NULL,'$company','$name','$desig','$phone','$email','$address','$web','$job_title','$job_desc','$no_of_pos','$yrs','$job_loc','$min','$sal_det','$profile','$ug_qual','$pg_qual','$time','Anyday','$months','$max','$time_post','0')";  
 
 
                     if($dbcon->query($insert_package))  
