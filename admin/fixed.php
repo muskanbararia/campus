@@ -33,7 +33,31 @@ float:left;
 margin: 3px 0 3px 5px;
 font-size:20px;
 }
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  box-shadow: 0 2px #999;
+  float: left;
+  padding: 2px;
+  margin: 2px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 </style>
+
 <?php  session_start();  ?>
 <body>
 
