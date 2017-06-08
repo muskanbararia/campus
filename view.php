@@ -1,3 +1,14 @@
+<?php
+   if( $_GET["title"]  ) {
+      $id=$_GET["title"];
+      
+      
+      
+   }
+   else{
+   	echo"<script>window.open('./index.php','_self')</script>";
+   }
+?>
 <?php include "head.php" ?>
 <body>
 <?php include "header.php" ?>
@@ -8,181 +19,192 @@
 	<div class="bgimg"><img src="img/topbg.jpg" title="Crpl" alt="Crpl"></div>
 </div>
  
-<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-1765482116803207",
-    enable_page_level_ads: true
-  });
+<div style="display:none;"><h1>View Job Details</h1></div>
+<div style="display:none;"><h2>Search and apply jobs</h2></div>
+<div style="display:none;"><h3>job description</h3></div>
+<div style="display:none;"><h4>keyskills</h4></div>
+<div style="display:none;"><h5>desired candidate profile</h5></div>
+<div style="display:none;"><h6>People who search this job also searched for the following Keywords</h6></div>
+
+<script src="../platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="text/javascript">
+function validate(frm)
+{
+	str = '';
+	frm.checkWait.disabled = true;
+    frm.checkWait.value = "Please wait";
+	
+	frm.checkWait1.disabled = true;
+    frm.checkWait1.value = "Please wait";
+	if(str != '')
+	{
+		alert("" + str);
+		frm.checkWait.disabled = false;
+    	frm.checkWait.value = "Send";
+		
+		frm.checkWait1.disabled = false;
+    	frm.checkWait1.value = "Send";
+		
+		return false; 
+	}} 
 </script>
 
-<div style="display:none;"><h1>Hot Job</h1></div>
-<div style="display:none;"><h2>Easy search Parameter</h2></div>
-<div style="display:none;"><h3>Quick Apply</h3></div>
-<div style="display:none;"><h4>Create Account</h4></div>
-<div style="display:none;"><h5>Resume Development</h5></div>
-
-<div class="middle">
-	<div class="middlediv">
-    	<div class="littlespace"></div>
-        <div class="formheadline">Hot Jobs</div>
-        <div class="formdiv">
-            <?php include "search.php" ?>
-    	</div>
-     </div>
-</div>
-
-
 <style>
-@media screen and (max-width:450px){ .sdsddd { display:none; } }
+.hdfnt { color:#3366FF; font-size:15px; cursor:pointer; }
 </style>
-<div class="middle">
-	<div class="middlediv">
-    	<div class="littlespace"></div>
-		<div class="fiveone">
-        	
-            <div class="leftformdiv">
-            	
-                <div class="leftheadline">Refine Results</div>
-               	
-               
-                <div class="sdsddd">
-                
-                
-                <?php include "by-salary.php" ?>
-                <?php include "by-edu.php" ?>
-                 
-                 </div>
-            </div>    
-      
-      
-        </div>
-        
-        
-        <div class="fivetwo">
-                                    
-       <div class="shortdetail">
-       <font color="#E98C0B" style="font-size:18px;"><b>Jobs Found</b></font>
-       <?php
+<?php
         
         include("./database/db_conection.php");
         //no.of listed packeges
-        $id=0;  
+         
         //Set limit of packages per page
-        $rec_limit = 10;
+        
         //Count of total packages
-        $sql = "SELECT count(id) FROM employer";
-        //Query to MySQL
-        $retval = mysqli_query($dbcon,$sql);
-        //Get total no. of rows
-        $row_fetch = mysqli_fetch_array($retval);
-        //First element of row[0]
-        $rec_count = $row_fetch[0];
-        //Check for no. of pages left     echo"<script>alert('$page')</script>";
-        if( isset($_GET['page'] ) ) {
-            $page = $_GET['page'];
-            $page_up= $page + 1;
-            if($page>1)
-                $page_down = $page - 1;
-            else
-                $page_down = 0;
-            //echo"<script>alert('DELETED YES')</script>";
-            $offset = $rec_limit * $page ;
-        }
-        else {
-            $page = 0;
-            $page_up=1;
-            $page_down = 0;
-            //echo"<script>alert(' $page DELETED NO')</script>";
-            $offset = 0;
-        }
+        
+        
         //No. of records left
-        $left_rec = $rec_count - ($page * $rec_limit);
-        if(isset($_POST['search']))
-        {
-            $loc = $_POST['jobLoc'];
-            $area = $_POST['fun_area'];
-            $exp = $_POST['total_exp_from'];
-            $ctc_min = $_POST['annual_ctc_min'];
-            $ctc_max = $_POST['annual_ctc_max'];
-            $view_users_query="SELECT * from employer WHERE job_loc='$loc' OR  work_exp_min = $exp  LIMIT $offset, $rec_limit";//select query for viewing users.
-        }
-        else{
-            $view_users_query="SELECT * from employer LIMIT $offset, $rec_limit";
-        }  
+        
+        $view_users_query="SELECT * from employer WHERE id='$id'";//select query for viewing users.  
         $run=mysqli_query($dbcon,$view_users_query);//here run the sql query.  
-        while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
+        if($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
         {  $id=$row[0];
             $title      =   $row[8];
             $exp        =   $row[11]; 
             $location   =   $row[12];
             $detail     =   $row[9];
-            $company    =   $row[1]; 
+            $company    =   $row[1];
+            $exp_min=$row[11];
+            $exp_max=$row[20];
+            $ctc_min=$row[13];
+            $ctc_max=$row[21]; 
+            $req=$row[9];
+            $sal=$row[14];
+            $cand=$row[15];
+            $ug=$row[16];
+            $pg=$row[17];
+            $web=$row[7];
+
+
+        }
       ?>
-       
+?>
+<div class="middle">
+	<div class="middlediv">
+    	<div class="smallspace"></div>
+		
         
-       </div>
-       <div class="shortdetail">
-            <div class="scontent">
-            <p><a href="index7dfd.php?actid=4&amp;path=Viewjob&amp;jobid=10953&amp;P-id=1746l1deAgef5915" target="_blank" class="sheadline" title="Service Engineer / Field Engineer "> <?php echo $title; ?> </a> <span>(<?php echo $exp; ?> Exp) 
-             
-            </span></p>
-            <p><span><?php echo $company; ?></span></p>
-            <p><span><i class="fa fa-map-marker"></i> Location : <a onclick="#"><?php echo $location; ?></a></span></p>
-            <p><?php echo $detail; ?></p>
-            </div>
-            <div class="sviewdetail">
-                <span>
-                    <a href="view.php?title=<?php echo $id ?>" title="View More" target="_blank">View More</a> | 
-                     | 
-                    <a href="apply.php?title=<?php echo $id ?>" title="Apply Now">Apply Now</a>
-                </span>
-            </div>
-                <?php } ?>
-            </div>
-           <link rel="stylesheet" type="text/css" href="css/pagination_style.css" />
-            <?php
-                if ($left_rec > 0) {
-                    # code...
-            ?>
-            <div style="padding-right:20px;">
-                <div style="float: left;">
-                    <a href="job.php?page=<?=$page_down?>">
-                        <i class="fa fa-chevron-left"></i>
-                    </a>
+        <div class="fivefour">
+        	<div class="largedetail">
+                       
+                    
+            	<div class="largebox"> 
+                	<div class="largecontent" style="background-color:#f4f4f4">
+                        <div class="smallheadline"><?php echo $title; ?></div>
+                        <p>
+                            <?php echo $company; ?>                           <br><span class="lighttxt"><i class="fa fa-map-marker"></i> Location : 
+                                                        <span class="green"><?php echo $location; ?> </span> 
+                                                       </span>
+                        </p>
+                        <p>Experience :  <?php echo $exp_min; ?> to  <?php echo $exp_max; ?> Month(s)</p>
+                     
+                     	<div>&nbsp; <b>&#8377;</b> &nbsp;   <?php echo $ctc_min; ?> to  <?php echo $ctc_max; ?>  </div>      
+                           
+                        
+                    </div>
+                	<div class="socialbox" style="background-color:#f4f4f4">
+                    	<div class="link">
+                        
+                        
+                                            	<a href="apply.php?title=<?php echo $id ?>" title="Apply Now">
+                        <input type="button" value="Apply Now" title="Apply Now" class="bluebtn" /> </a>
+                        
+                                                
+						</div>
+                       
+                        
+                         
+                 </div>
                 </div>
-                <div style="float: right;">
-                    <a href="job.php?page=<?=$page_up?>">
-                        <i class="fa fa-chevron-right"></i>
-                    </a>
+                
+                <div class="fulldiv">
+                <div class="headline1" > <span class="cpl1">Job Description</span> </div>
+                    
+               <div class="acform"> <p><?php echo $req; ?> </p> 
+               <ul>
+                <li>Salary Details</li>
+                <li><?php echo $sal; ?>  </li>
+               </ul>
+              
+			 
+               
+                              
+              </div>      
+              </div>
+               
+                            <div class="headline1"><span class="cpl1">Qualification</span></div>
+              <div class="acform">
+                             <ul>
+                <li>UG Qulification</li>
+                <li><?php echo $ug; ?> </li>
+               </ul>
+                                              <ul>
+                <li>PG Qulification</li>
+                <li><?php echo $pg; ?> </li>
+               </ul>
+               			                 
+                             </div>       
+                              
+              <div class="headline1"><span class="cpl1">Desired Candidate Profile</span></div>  
+              <div class="acform">
+              <?php echo $cand; ?> </div>
+                  
+			  <div class="headline1"><span class="cpl1">Company Profile</span></div>
+              <div class="acform">
+               <ul>
+                <li>Company Name</li>
+                <li><?php echo $company; ?> </li>
+               </ul>
+                               <ul>
+                <li>Website</li>
+                <li><?php echo $web; ?> </li>
+               </ul>
+                                              
+              </div>          
+               
+                      
+               
+                <div class="whitediv"><a href="apply.php?title=<?php echo $id ?>" title="Apply Now">
+                        <input type="button" value="Apply Now" title="Apply Now" class="bluebtn" /> </a>
+                
+                
                 </div>
+                
+               
+                              
+               
+                             <br />   
+			
+			
+
             </div>
-            <?}else{?>
-            <div style="padding-right:20px;">
-                <div style="float: left;">
-                    <a href="job.php?page=<?=$page_down?>">
-                        <i class="fa fa-chevron-left"></i>
-                    </a>
-                </div>
-            </div>
-            <?}?>
         </div>
         
         
         <div class="fivethree">
-        	<div class="rectangleads"><a href="index52e4.html?actid=098&amp;path=Jobpost&amp;P-id=1746l1deAgef5915" target="_blank" title="Post Your Job">
-            <img src="img/post_job1.jpg" title="Post Job" alt="Post Job"></a></div>
+        	<div class="rectangleads"> 
+            <a href="index4d1b.html?actid=098&amp;path=CreateAccount&amp;P-id=1746l1deAgef5915" title="Create Account" target="_blank"><img src="img/lookingjob.jpg" alt="Create Account" title="Create Account"></a>
+            </div>
             <div class="rightinfo">
             	<div class="rtitle">Partner Job Portal</div>
                 <div class="rcontent">
                 	<ul>
-                      <li>Register Free for the best job offers.</li>
+                      <li>Quick search your dream jobs in portal.</li>
                       <li>Organize and systemize your job search!.</li>
-                      <li>Apply to jobs faster</li>
-                      <li>Keep your job search secret</li>
-                      <li>Ensure privacy of your personal details</li>
+                      <li>Apply to jobs very faster.</li>
+                      <li>Keep your job search secret.</li>
+                      <li>Ensure privacy of your personal details.</li>
                     </ul>
-                   <a href="index4d1b.html?actid=098&amp;path=CreateAccount&amp;P-id=1746l1deAgef5915" title="Create Account" target="_blank" class="rbutton">Create Account</a>
+                    <a href="index6ddd.php?actid=098&amp;path=PartnerSite&amp;P-id=1746l1deAgef5915" target="_blank" class="rbutton">Search Jobs ...</a>
                 </div>
             </div>
             <div class="rightinfo2">
@@ -191,16 +213,27 @@
                 	<ul>
                       <li><a href="resume/index.html" title="Resume Writing" target="_blank"><b>Resume Writing</b></a><br>Get our experts to write your resume</li>
                       <li><a href="resume/index.html" title="Resume Display" target="_blank"><b>Resume Display</b></a><br>Lets all recruiters see your resume </li>
-                      <li><a href="resume/index.html" title="Jobs4U" target="_blank"><b>Jobs4U</b></a><br>Expert help the better job relevancy </li>
+                      <li><b>Jobs4U</b><br>Expert help the better job relevancy</li>
                     </ul>
-                    <a href="resume/index.html" title="View More" target="_blank" class="rbutton2">View More...</a>
+                    <a href="resume/index.html" target="_blank" title="View More" class="rbutton2">Know More ...</a>
                 </div>
             </div>
         </div>
         
-          <div class="fivethree">
-        	<div class="rectangleads">
-            <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        
+       <div class="fivethree"> 
+        <div class="rectangleads">
+            
+           <a href="index7678.php?&amp;actid=098&amp;path=Jobpost&amp;P-id=1746l1deAgef5915" target="_blank"><img src="img/post_job1.jpg" alt="Post Jobs" title="Post Jobs"></a>
+           </div>
+            </div>
+            
+            
+            
+            
+        <div class="fivethree"> 
+        <div class="rectangleads">    
+        <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
 <!-- Crplindia-viewjobs-vertical160-600 -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:160px;height:600px"
@@ -209,11 +242,98 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-            </div>
+           </div>
+           </div>
         
     </div>
     <div class="smallspace"></div>
 </div>
+
+<div id="pop8" class="needpopup">
+    <form action="#" method="post" onSubmit="return validate(this);">
+    <div class="popohline"><i class="fa fa-envelope-o"></i> Job Alert!</div>
+    <div class="fulldiv">
+    Be informed of new jobs at corporate resourses.
+    </div>
+    <div class="acforminfo"><b>Send Me Jobs Like This</b></div>
+    <div class="fulldiv">
+        <div class="textbox">Name <i class="star">*</i></div>
+        <div class="inputbox"><input name="name" required value="" type="text"></div>
+	</div>
+    <div class="fulldiv">
+        <div class="textbox">Email ID <i class="star">*</i></div>
+        <div class="inputbox"><input name="email" required value=""  type="email"></div>
+	</div>
+    <div class="fulldiv">
+        <div class="textbox">Mobile No <i class="star">*</i></div>
+        <div class="inputbox"><input name="mobile" value=""  required type="number" oninput="maxLengthCheck(this)" maxlength = "10" min = "0" max = "9999999999"></div>
+	</div>
+    
+    <div class="fulldiv">
+        <div class="textbox">&nbsp;</div>
+        <div class="inputbox">
+       <input type="checkbox" checked="checked" id="c55" required  name="checkbox" />
+            <label for="c55"><span></span>  I Accept the <a href="index7ce1.html?actid=060&amp;path=Terms-of-Use&amp;P-id=1746l1deAgef5915" target="_blank" class="red">Term & conditions</a></label>
+        </div>
+	</div>
+    <div class="fulldiv">
+        <div class="textbox">&nbsp;</div>
+        <div class="inputbox">
+        <input class="orangebtn" name="" value="Submit" id="checkWait1" type="submit">
+        </div>
+	</div>
+    
+    <input type="hidden" name="frm_action" value="1">
+    <input type="hidden" name="actid" value="4">
+    <input type="hidden" name="job_id" value="10949">
+    <input type="hidden" name="execpath" value=""/>
+    </form>
+    <div class="fulldiv">
+    &nbsp;
+    </div>
+</div>
+
+	<div id="pop4" class="needpopup">
+    <form action="#" method="post" onSubmit="return validate(this);"> 
+    <div class="popohline"><i class="fa fa-envelope-o"></i> Forward to Friend</div>
+    <div class="fulldiv">
+        <div class="textbox">Your Mail ID <i class="star">*</i></div>
+        <div class="inputbox"><input name="your_email" required value="" type="email"></div>
+	</div>
+    <div class="fulldiv">
+        <div class="textbox">Friend(s) Mail ID <i class="star">*</i></div>
+        <div class="inputbox"><input name="friend_email" required value=""  type="email"></div>
+	</div>
+    <div class="fulldiv">
+        <div class="textbox">Subject <i class="star">*</i></div>
+        <div class="inputbox"><input name="subject" value="Your Friend has forwarded you the Job :Service Officer (banking Operations) at Corporate Resources"  required type="text" oninput="maxLengthCheck(this)"></div>
+	</div>
+    <div class="fulldiv">
+        <div class="textbox">Message <i class="star">*</i></div>
+        <div class="inputbox">
+        <textarea name="message" required></textarea></div>
+	</div>
+    <div class="fulldiv">
+        <div class="textbox">&nbsp;</div>
+        <div class="inputbox">
+        <input class="orangebtn" name="" value="Submit" id="checkWait" type="submit">
+        </div>
+	</div>
+    
+    <input type="hidden" name="frm_action2" value="1">
+    <input type="hidden" name="actid" value="4">
+    <input type="hidden" name="jobid" value="10949">
+    <input type="hidden" name="execpath" value=""/>
+    </form>   
+</div>
+
+
+
+
+
+
+
+
 
 <script type="text/javascript" async="async" data-cfasync="false" src="https://mylivechat.com/chatinline.aspx?hccid=33472440"></script>
 <script type="text/javascript">
@@ -253,7 +373,7 @@ function validate(frm)
 
 <div id="pop2" class="needpopup">
     
-    <form action="http://www.crplindia.com/index.php?actid=67&amp;Path=Dynamic&amp;pth=026" method="post" onSubmit="return validate(this);">
+    <form action="http://www.crplindia.com/index.php?actid=67&amp;Path=Dynamic&amp;pth=4" method="post" onSubmit="return validate(this);">
     <div class="popohline"><i class="fa fa-envelope-o"></i> Job Alert!</div>
     <div class="fulldiv">
     Get Free Job Alerts on your Mobile and Email from Corporate Resourses
@@ -787,7 +907,7 @@ function validate(frm)
             
             <div class="map"><a href="https://goo.gl/maps/Hj7TbcHy75C2" title="Find us on Google" target="_blank"><img src="img/map.jpg" alt="Map" title="Map" ></a></div>
             
-                        <form id="footersubscribe" action="http://www.crplindia.com/index.php?actid=73&amp;Path=Dynamic&amp;pth=026" method="post">
+                        <form id="footersubscribe" action="http://www.crplindia.com/index.php?actid=73&amp;Path=Dynamic&amp;pth=4" method="post">
             <input name="email" value="" type="email" style="width:74%!important; color:#FFF!important; background-color:transparent!important;" required placeholder="Subscribe Email" />
                 
                 <button title="Send" type="submit"><i class="fa fa-envelope-o"></i></button>
@@ -906,5 +1026,5 @@ ga('send', 'pageview');
 
 	</body>
 
-<!-- Mirrored from www.crplindia.com/index.php?page=1&actid=026&execpath=&path=1746l1deAgef5915&keyword=&fun_area=&total_exp_from=&annual_ctc_min=&annual_ctc_max=&one_d_old=&three_d_old=&seven_d_old=&fiftin_d_old=&thirty_d_old=&zero_three=&three_six=&six_ten=&ten_fiftin=&fiftin_tntfive=&tntfive_thirty=&loc_name=&job_role=&fun_name=&indus_name=&degree_name=&temp_job=&cont_job=&pmt_job=&walkin_job= by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 May 2017 07:33:08 GMT -->
+<!-- Mirrored from www.crplindia.com/index.php?actid=4&path=Viewjobs&jobid=10949&P-id=1746l1deAgef5915 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 May 2017 07:28:12 GMT -->
 </html>
