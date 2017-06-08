@@ -2228,7 +2228,7 @@ We make sure that the exercise of Sharing Your Requirement will be a beneficial 
                    <li>UG Qualification</li>
                    <li>
                    
-                    <select name="u_g_qualification">
+                    <select name="u_g_qualification" id="uG">
                     <option value="">---Select---</option>
                                         <option style="font-weight:bold; background-color:#E1E9F7; " value="346" disabled="disabled" > --- Any Graduate--- </option>
                                                             <option value="347" >Any Specialization</option>
@@ -2359,11 +2359,19 @@ We make sure that the exercise of Sharing Your Requirement will be a beneficial 
                                         </select>
                     
   					</li>
-                   </ul> 
+                   </ul>
+                   <input type="hidden" name="ugDetails" id="ugD" value="xx"> 
+                   <script type="text/javascript">
+                       $("#uG").change(function() {
+                            var texy = $(this).find("option:selected").text();
+                           alert(texy+' clicked!');
+                           $('#ugD').val(texy);
+                       });
+                   </script>
                    <ul>
                    <li>PG Qualification</li>
                    <li>
-                    <select name="pg_qualification">
+                    <select name="pg_qualification" id="pG">
                     <option value="">---Select---</option>
                                         <option style="font-weight:bold; background-color:#E1E9F7;" value="337" >--- Any Post Graduate --- </option>
                                                             <option value="338" >Any Specialization</option>
@@ -2504,7 +2512,7 @@ We make sure that the exercise of Sharing Your Requirement will be a beneficial 
                                         <option value="316" >Rheumatology</option>
                                         <option value="317" >Other</option>
                                         <option style="font-weight:bold; background-color:#E1E9F7;" value="321" >--- PG Diploma --- </option>
-                                                            <option value="322" >Chemical</option>
+                                        <option value="322" >Chemical</option>
                                         <option value="323" >Civil</option>
                                         <option value="324" >Computers</option>
                                         <option value="325" >Electrical</option>
@@ -2512,11 +2520,19 @@ We make sure that the exercise of Sharing Your Requirement will be a beneficial 
                                         <option value="327" >Mechanical</option>
                                         <option value="328" >Other</option>
                                         <option style="font-weight:bold; background-color:#E1E9F7;" value="339" >--- Post Graduation Not Required --- </option>
-                                                            <option value="340" >None</option>
+                                        <option value="340" >None</option>
                                         </select>
 					</li>
                    </ul>
-                   
+                   <input type="hidden" name="pgDetails" id="pgD" value="xx"> 
+                   <script type="text/javascript">
+                        $('input.pgDetails').val($("#pG option:selected").text());
+                       $("#pG").change(function() {
+                           var tex = $(this).find("option:selected").text();
+                           alert(tex+' clicked!');
+                           $('#pgD').val(tex);
+                       });
+                   </script>
                    </div>   
                    
                      
@@ -2630,8 +2646,8 @@ We make sure that the exercise of Sharing Your Requirement will be a beneficial 
                     $salary=$min."-".$max;
                     $sal_det=$_POST['salary_details'];
                     $profile=$_POST['candidate_profile'];
-                    $ug_qual=$_POST['u_g_qualification'];
-                    $pg_qual=$_POST['pg_qualification'];
+                    $ug_qual=$_POST['ugDetails'];
+                    $pg_qual=$_POST['pgDetails'];
                     $start=$_POST['start'];
                     $end=$_POST['end'];
                     $time=$start."-".$end;

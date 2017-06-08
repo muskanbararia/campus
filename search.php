@@ -1,7 +1,8 @@
 <div class="fulldiv">
-                <form  action="#" method="post">
+                <form  action="job.php" method="post">
                 
-                <div class="div100">Location <br> <select name="job_loc" data-placeholder="Select City"  class="chzn-select"  tabindex="18" id="multiple-label-example"  >
+                <div class="div100">Location <br> 
+                <select name="job_loc" id="jloc" data-placeholder="Select City"  class="chzn-select"  tabindex="18" id="multiple-label-example"  >
                             <option value="">---Select City---</option>
                                                         <option style="font-weight:bold; background-color:#E1E9F7; " disabled="disabled" value="16" >---- Top Metropolitan Cities---- </option>
                                                                                     <option value="47" >Ahmedabad</option>
@@ -292,7 +293,17 @@
                                                         <option value="302" >Kolkata</option>
                                                         <option value="303" >Siliguri</option>
                                                         <option value="304" >West Bengal - Other</option>
-                                                        </select> </div>
+                                                        </select> 
+                                                        </div>
+                     <input type="hidden" name="jobLoc" id="loc" value="xx"> 
+                     <script type="text/javascript">
+                          $('input.pgDetails').val($("#pG option:selected").text());
+                          $("#jloc").change(function() {
+                             var tex = $(this).find("option:selected").text();
+                             alert(tex+' clicked!');
+                             $('#loc').val(tex);
+                         });
+                     </script>
                 <div class="div20">
                 Job Category<br>
                 <select name="fun_area" >
