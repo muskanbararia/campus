@@ -1,8 +1,11 @@
 <div id="top">
 	<div class="topdiv">
     	<div class="topleft">
-        <div class="topleft1 hide"><i class="fa fa-envelope-o"></i> <a href="mailto:info@campuscatalyst.com"><img src="img/email.png"></a></div>
-        <div class="topleft1"><i class="fa fa-phone"></i> <span class="no">+91-8073431088</span></div>
+        <div class="topleft1 hide"><i class="fa fa-envelope-o"></i> <a href="mailto:info@campuscatalyst.com" style="color: white;">Mail Us On:
+info@quikjob.in</a></div>
+        <div class="topleft1"><i class="fa fa-phone"></i> <span class="no">Call Us On:
++91-9861011110
+</span></div>
         </div>
         <div class="topright">
             <?php

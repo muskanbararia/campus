@@ -42,17 +42,17 @@
 		<div class="fiveone">
         	
             <div class="leftformdiv">
-            	
-                <div class="leftheadline">Refine Results</div>
-               	
-               
-                <div class="sdsddd">
-                
-                
-                <?php include "by-salary.php" ?>
-                <?php include "by-edu.php" ?>
-                 
-                 </div>
+               <div class="rightinfo2">
+                <div class="rtitle">Resume Development !</div>
+                <div class="rcontent">
+                    <ul>
+                      <li><a href="resume/index.html" title="Resume Writing" target="_blank"><b>Resume Writing</b></a><br>Get our experts to write your resume</li>
+                      <li><a href="resume/index.html" title="Resume Display" target="_blank"><b>Resume Display</b></a><br>Lets all recruiters see your resume </li>
+                      <li><a href="resume/index.html" title="Jobs4U" target="_blank"><b>Jobs4U</b></a><br>Expert help the better job relevancy </li>
+                    </ul>
+                    <a href="resume/index.html" title="View More" target="_blank" class="rbutton2">View More...</a>
+                </div>
+            </div>
             </div>    
       
       
@@ -103,12 +103,7 @@
         {
             $loc = $_POST['jobLoc'];
             
-            $area = $_POST['fun_area'];
-            $exp = $_POST['total_exp_from'];
-            $ctc_min = $_POST['annual_ctc_min'];
-            $ctc_max = $_POST['annual_ctc_max'];
-            
-            $view_users_query="SELECT * from employer WHERE status='1' AND (job_loc='$loc' OR job_desig='$area' OR ctc_min='$ctc_min' OR ctc_max='$ctc_max' OR work_exp_min = '$exp')  LIMIT $offset, $rec_limit";
+            $view_users_query="SELECT * from employer WHERE status='1' AND job_loc='$loc' LIMIT $offset, $rec_limit";
             //echo $view_users_query;
            // exit();//select query for viewing users.
         }
@@ -133,7 +128,6 @@
             <p><a href="index7dfd.php?actid=4&amp;path=Viewjob&amp;jobid=10953&amp;P-id=1746l1deAgef5915" target="_blank" class="sheadline" title="Service Engineer / Field Engineer "> <?php echo $title; ?> </a> <span>(<?php echo $exp; ?> Months Exp) 
              
             </span></p>
-            <p><span><?php echo $company; ?></span></p>
             <p><span><i class="fa fa-map-marker"></i> Location : <a onclick="#"><?php echo $location; ?></a></span></p>
             <p><?php echo $detail; ?></p>
             </div>
@@ -189,17 +183,6 @@
                       <li>Ensure privacy of your personal details</li>
                     </ul>
                    <a href="index4d1b.html?actid=098&amp;path=CreateAccount&amp;P-id=1746l1deAgef5915" title="Create Account" target="_blank" class="rbutton">Create Account</a>
-                </div>
-            </div>
-            <div class="rightinfo2">
-            	<div class="rtitle">Resume Development !</div>
-                <div class="rcontent">
-                	<ul>
-                      <li><a href="resume/index.html" title="Resume Writing" target="_blank"><b>Resume Writing</b></a><br>Get our experts to write your resume</li>
-                      <li><a href="resume/index.html" title="Resume Display" target="_blank"><b>Resume Display</b></a><br>Lets all recruiters see your resume </li>
-                      <li><a href="resume/index.html" title="Jobs4U" target="_blank"><b>Jobs4U</b></a><br>Expert help the better job relevancy </li>
-                    </ul>
-                    <a href="resume/index.html" title="View More" target="_blank" class="rbutton2">View More...</a>
                 </div>
             </div>
         </div>
