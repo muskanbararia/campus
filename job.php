@@ -103,14 +103,15 @@
         {
             $loc = $_POST['jobLoc'];
             
-            $view_users_query="SELECT * from employer WHERE status='1' AND job_loc='$loc' LIMIT $offset, $rec_limit";
+            
             //echo $view_users_query;
            // exit();//select query for viewing users.
         }
         else{
             
-            $view_users_query="SELECT * from employer WHERE status='1'  LIMIT $offset, $rec_limit";
+            $loc=$_GET['type'];
         }  
+        $view_users_query="SELECT * from employer WHERE status='1' AND ug_qual LIKE '$loc' LIMIT $offset, $rec_limit";
         $run=mysqli_query($dbcon,$view_users_query);//here run the sql query.  
         while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
         {  $id=$row[0];
@@ -147,12 +148,12 @@
             ?>
             <div style="padding-right:20px;">
                 <div style="float: left;">
-                    <a href="job.php?page=<?=$page_down?>">
+                    <a href="job.php?page=<?=$page_down?>&type=<?=$loc?>">
                         <i class="fa fa-chevron-left"></i>
                     </a>
                 </div>
                 <div style="float: right;">
-                    <a href="job.php?page=<?=$page_up?>">
+                    <a href="job.php?page=<?=$page_up?>&type=<?=$loc?>">
                         <i class="fa fa-chevron-right"></i>
                     </a>
                 </div>
