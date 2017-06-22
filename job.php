@@ -775,9 +775,9 @@ function validate(frm)
       		<div class="logo"><img src="img/crpl.png" alt="Crplindia.com"></div>
             <p>
             	<span class="white">Regd. Office</span><br>
-            	N-6/9, Nayapally, I.R.C. Village,<br>
-                Bhubaneswar-751015. Orissa<br>
-				Ph: <span class="no bold">0674-6574145-154</span>
+            	136-137, Bharati Tower, Forest Park<br>
+                 Bhubaneswar, Orissa-751009<br>
+				Ph: <span class="no bold">+91-9861-011-110</span>
             </p> 
             
             <div class="map"><a href="https://goo.gl/maps/Hj7TbcHy75C2" title="Find us on Google" target="_blank"><img src="img/map.jpg" alt="Map" title="Map" ></a></div>
@@ -886,19 +886,6 @@ $(document).ready(function() {
 })
 </script>
 <script type="text/javascript" src="js/jquery.slitslider.js"></script>
-
-
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','../www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-22156376-2', 'auto');
-ga('send', 'pageview');
-
-</script>
-
 	</body>
 
 <!-- Mirrored from www.crplindia.com/index.php?page=1&actid=026&execpath=&path=1746l1deAgef5915&keyword=&fun_area=&total_exp_from=&annual_ctc_min=&annual_ctc_max=&one_d_old=&three_d_old=&seven_d_old=&fiftin_d_old=&thirty_d_old=&zero_three=&three_six=&six_ten=&ten_fiftin=&fiftin_tntfive=&tntfive_thirty=&loc_name=&job_role=&fun_name=&indus_name=&degree_name=&temp_job=&cont_job=&pmt_job=&walkin_job= by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 May 2017 07:33:08 GMT -->

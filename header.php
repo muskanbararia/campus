@@ -48,8 +48,7 @@ info@quikjob.in</a></div>
             <?php }
             else{ ?>
                                    
-                                    <div class="topright1">
-            
+            <div class="topright1">`
             <div class="login"><a href="./login.php"  target="_blank" title="Employee Login"><i class="fa fa-sign-in"></i>Login</a></div>
             <div class="login"><a href="./register.php"  target="_blank" title="Employee Login"><i class="fa fa-sign-in"></i>Register</a></div>
             </div>

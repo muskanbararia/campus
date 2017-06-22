@@ -38,15 +38,15 @@
       if($run_query->num_rows==0){
          
       ?>
-                           <li><a href="resume.php" title="Submit-Resume"><i class="fa fa-file-text-o"></i><br /><span>Submit Resume</span></a>         
+                           <li><a href="resume.php" title="Submit-Resume"><i class="fa fa-file-text-o"></i><br /><span>Submit Resume</span></a>
+                           <li><a href="job-history.php" title="Work With Us"><i class="fa fa-history"><br /><span>Job History</span></a></li>         
                     </li>
                     <?php 
                 }
                 else{
                     ?>
-                    <li><a href="update-resume.php" title="Submit-Resume"><i class="fa fa-file-text-o"></i><br /><span>Update Resume</span></a>         
-                    </li>
-
+                    <li><a href="update-resume.php" title="Submit-Resume"><i class="fa fa-file-text-o"></i><br /><span>Update Resume</span></a></li>
+                    <li><a href="job-history.php" title="Work With Us"><i class="fa fa-history"></i><br /><span>Job History</span></a></li> 
 <?php
                 }
 ?>                       
