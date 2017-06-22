@@ -25,17 +25,17 @@
                 <p>
                 <strong>We help you discover the best talent for your company !</strong><br><br>
                     
-      			Finding  skilled resources and retaining them is a   challenge that many companies face.  We at Campus Catalyst with huge experience in Human Resource  Management and Consulting   help you find the right candidates for your company,  partner with you   in maximizing potential of your human capital and optimizing  your HR   processes.<br><br>
-        Over  the years, we have built up strong partnerships with companies in   India and  abroad; helped build successful companies by identifying the   best candidates  for them, many of whom have gone on to create their own   success stories. With  human capital being the most valuable asset for   your company today, we at Campus Catalyst make sure that you get   the best in the business. Our wide suite of  services lets you leverage   your company's human capital and optimize the  performance of your   employees.
+      			Finding  skilled resources and retaining them is a   challenge that many companies face.  We at QuikJobs with huge experience in Human Resource  Management and Consulting   help you find the right candidates for your company,  partner with you   in maximizing potential of your human capital and optimizing  your HR   processes.<br><br>
+        Over  the years, we have built up strong partnerships with companies in   India and  abroad; helped build successful companies by identifying the   best candidates  for them, many of whom have gone on to create their own   success stories. With  human capital being the most valuable asset for   your company today, we at QuikJobs make sure that you get   the best in the business. Our wide suite of  services lets you leverage   your company's human capital and optimize the  performance of your   employees.
         	  <br><br>
         Our  services have developed based on international best practices and   learning's  from thousands of assignments executed by us over the years,   and is adapted to  suit our clients' businesses. Be it the right talent   for your organization, or  a cost-effective consulting solution, or a   training program, or solutions for  enhancing your HR processes, our   services are customized just for you.<br><br>
         We  provide innovative approaches for each of our client's unique needs.   We have  in-house capabilities and resources to handle the most   challenging aspects of  your recruitment process (advertisement,   pre-screening dedicated resources, and  negotiation). We add velocity   &amp; value to your recruitment efforts with an  additional level of   support.<br><br>
         With our  cost effective solutions and customized strategy we make a   sense for specific  needs and objectives of an organization, Our HR   solutions provides an  economical way to procure talent to your   organization. Be it a single  professional to complement your team or an   entire work-force. We have the  option to improve the existing   capabilities of your organizations.</p>
       <p>
        <br><strong>Our Presence in India </strong><br><br>  
-        Campus Catalyst is a national HR service  provider   servicing world class companies across the globe. Started in 2004, the    company has grown into a full spectrum HR services provider for clients    worldwide. It has helped generate career opportunities for thousands of    individuals in the countries, and has worked for over Fortune 500    organizations.<br><br>
-        Campus Catalyst offers the broadest HR  services   portfolio ranging from search, selection, staffing, consulting,    outsourcing, training and HR automation. The organization has a vast   network of  offices across the country to be within the reach of   candidates and flexi  workers.<br><br>
-        Campus Catalyst continues to focus on  developing   customized and innovative HR services, leveraging on its unique    strengths of geographical presence and end-to-end capability across all   HR  service functions.
+        QuikJobs is a national HR service  provider   servicing world class companies across the globe. Started in 2004, the    company has grown into a full spectrum HR services provider for clients    worldwide. It has helped generate career opportunities for thousands of    individuals in the countries, and has worked for over Fortune 500    organizations.<br><br>
+        QuikJobs offers the broadest HR  services   portfolio ranging from search, selection, staffing, consulting,    outsourcing, training and HR automation. The organization has a vast   network of  offices across the country to be within the reach of   candidates and flexi  workers.<br><br>
+        QuikJobs continues to focus on  developing   customized and innovative HR services, leveraging on its unique    strengths of geographical presence and end-to-end capability across all   HR  service functions.
         </p>
         
         
@@ -521,7 +521,7 @@ function validate(frm)
         |
         <a href="#" title="Site Map">Site Map</a>
         </div>
-        <div class="copyrighttxt">&copy; Copyright : 2017 Campus Catalyst - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
+        <div class="copyrighttxt">&copy; Copyright : 2017 QuikJobs - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
     </div>
 </div>
 <a href="#" class="scrollToTop"></a>

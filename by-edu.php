@@ -1,5 +1,4 @@
-<div class="leftsmallheadline"><i class="fa fa-check-square-o"></i> By Education</div>
-                <form  action="#" method="POST">
+<div class="leftsmallheadline"><i class="fa fa-check-square-o"></i> By Education</div> <form  action="#" method="POST">
                 <div class="maxheight" style="height:240px;">
                 <div class="div100">
                                   <div>

@@ -110,7 +110,7 @@ var countdownTimer = setInterval('secondPassed()', 1000);
                 <div class="fulldiv">
                 	
 
-                       <div class="orangeheadline"><i class="fa fa-file-text-o"></i> Log in to Campus Catalyst</div>
+                       <div class="orangeheadline"><i class="fa fa-file-text-o"></i> Log in to QuikJobs</div>
                     <div class="acforminfo">Please fillup the form below to Submit Resume. <span><i class="star">*</i> Mark are mandatory</span></div>
 					<form  id="form1" action="login.php" method="POST"   enctype="multipart/form-data"> 
                                         
@@ -694,7 +694,7 @@ function validate(frm)
         |
         <a href="#" title="Site Map">Site Map</a>
         </div>
-        <div class="copyrighttxt">&copy; Copyright : 2017 Campus Catalyst - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
+        <div class="copyrighttxt">&copy; Copyright : 2017 QuikJobs - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
     </div>
 </div>
 <a href="#" class="scrollToTop"></a>

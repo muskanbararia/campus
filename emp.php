@@ -11,7 +11,7 @@
 </div>
  
 <div style="display:none;"><h1>Submit Requirment</h1></div>
-<div style="display:none;"><h2>Avail the support of Campus Catalyst</h2></div>
+<div style="display:none;"><h2>Avail the support of QuikJobs</h2></div>
 
 <script type="text/javascript"> 
 function validate(frm)
@@ -66,12 +66,12 @@ f.style.display=(f.style.display == "none")?"block":"none";
                 
                <div style="float:right; font-size:14px;"><a href="#" title="Submit Resume"><font color="#0033CC"><u>Job Seeker's Register here Free</u></font></a></div> 
                 </div>
-                    <p>Submit Job Vacancy with us and Avail the support of Campus Catalyst! Hire the Best Candidate in the shortest time.
+                    <p>Submit Job Vacancy with us and Avail the support of QuikJobs! Hire the Best Candidate in the shortest time.
                    <br />
 
 How Job Vacancy Sharing helps:-<br />
 <ul>
-<li>You get support from Campus Catalyst to fulfill your Hiring needs.</li>
+<li>You get support from QuikJobs to fulfill your Hiring needs.</li>
 <li>It helps you reach your desired candidate segment in the shortest time.</li>
 <li>From professional Recruiter You receive the most updated and relevant applicant only.</li>
 <li>You enjoy quicker turnaround as you receive only the Best Matching job applicants in your Interview.</li>
@@ -3196,7 +3196,7 @@ function validate(frm)
         |
         <a href="#" title="Site Map">Site Map</a>
         </div>
-        <div class="copyrighttxt">&copy; Copyright : 2017 Campus Catalyst - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
+        <div class="copyrighttxt">&copy; Copyright : 2017 QuikJobs - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
     </div>
 </div>
 <a href="#" class="scrollToTop"></a>

@@ -66,6 +66,7 @@
        <?php
         
         include("./database/db_conection.php");
+        
         //no.of listed packeges
         $id=0;  
         //Set limit of packages per page
@@ -101,14 +102,19 @@
         if(isset($_POST['search']))
         {
             $loc = $_POST['jobLoc'];
+            
             $area = $_POST['fun_area'];
             $exp = $_POST['total_exp_from'];
             $ctc_min = $_POST['annual_ctc_min'];
             $ctc_max = $_POST['annual_ctc_max'];
-            $view_users_query="SELECT * from employer WHERE job_loc='$loc' OR  work_exp_min = $exp  LIMIT $offset, $rec_limit";//select query for viewing users.
+            
+            $view_users_query="SELECT * from employer WHERE status='1' AND (job_loc='$loc' OR job_desig='$area' OR ctc_min='$ctc_min' OR ctc_max='$ctc_max' OR work_exp_min = '$exp')  LIMIT $offset, $rec_limit";
+            //echo $view_users_query;
+           // exit();//select query for viewing users.
         }
         else{
-            $view_users_query="SELECT * from employer WHERE status='1' LIMIT $offset, $rec_limit";
+            
+            $view_users_query="SELECT * from employer WHERE status='1'  LIMIT $offset, $rec_limit";
         }  
         $run=mysqli_query($dbcon,$view_users_query);//here run the sql query.  
         while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  

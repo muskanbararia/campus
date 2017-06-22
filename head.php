@@ -9,8 +9,8 @@
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Campus Catalyst | A Unit of Staffing Gamut consulting Services</title>
-<meta name="description" content="Campus Catalyst | A Unit of Staffing Gamut consulting Services">
+<title>QuikJobs | A Unit of Staffing Gamut consulting Services</title>
+<meta name="description" content="QuikJobs | A Unit of Staffing Gamut consulting Services">
 <meta name="keywords" content="Jobs in Pune - Manpower Consultant -  Corporate Resources">
 <link rel="shortcut icon" type="image/x-icon" href="img/slider/favicon.ico" />
 <script  src="js/jquery.js" type="text/javascript"></script>

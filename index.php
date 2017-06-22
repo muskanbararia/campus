@@ -256,8 +256,8 @@
                     	<div class="tick"></div>
                         <a href="#">
                     	<div class="popupmsg">
-Campus Catalyst HR Solutions is one of the best organizations in India for getting quality heads. They excel in their Deliveries, commitments to the best of customer satisfaction. Overall good and committed Organization. Our future needs and requirements for quality manpower the simplest equations Campus Catalyst HR Solutions only.<br />
-Overall Campus Catalyst is still one of the top firms..</div></a>
+QuikJobs HR Solutions is one of the best organizations in India for getting quality heads. They excel in their Deliveries, commitments to the best of customer satisfaction. Overall good and committed Organization. Our future needs and requirements for quality manpower the simplest equations QuikJobs HR Solutions only.<br />
+Overall QuikJobs is still one of the top firms..</div></a>
 
 						</div>
                         <div class="chatpeople">
@@ -274,7 +274,7 @@ Overall Campus Catalyst is still one of the top firms..</div></a>
                     	<div class="tick"></div>
                         <a href="#">
                     	<div class="popupmsg">
-Campus Catalyst HR Solutions is one of the best organizations in India for getting quality heads. They excel in their Deliveries, commitments to the best of customer satisfaction. Overall good and committed Organization. Our future needs and requirements for quality manpower the simplest equations Campus Catalyst HR Solutions only.</div>
+QuikJobs HR Solutions is one of the best organizations in India for getting quality heads. They excel in their Deliveries, commitments to the best of customer satisfaction. Overall good and committed Organization. Our future needs and requirements for quality manpower the simplest equations QuikJobs HR Solutions only.</div>
 						</a>
                     </div>
                     <div class="chatpeople">
@@ -290,7 +290,7 @@ Campus Catalyst HR Solutions is one of the best organizations in India for getti
                     	<div class="tick"></div>
                         <a href="#">
                     	<div class="popupmsg">
-Campus Catalyst is fully transparent in their operations and I am fully satisfied with the services provided y them as well as the company with I have joined through Campus Catalyst. I am really thankful to them for helping me to get this job. My employer company is good and I am satisfied with the company and the job.<br />
+QuikJobs is fully transparent in their operations and I am fully satisfied with the services provided y them as well as the company with I have joined through QuikJobs. I am really thankful to them for helping me to get this job. My employer company is good and I am satisfied with the company and the job.<br />
 See a very good improvement in quality of search and delivery levels.</div></a>
 
 </div>
@@ -309,11 +309,11 @@ See a very good improvement in quality of search and delivery levels.</div></a>
                 <div class="quote"><i class="fa fa-quote-left"></i></div><div class="testimonialsline">Our Candidate Says</div>
                 <a href="#">
                 <ul>
-                    <li>" Campus Catalyst is fully transparent in their operations and I am fully satisfied with the services provided y them as well as the company with I have joined through Campus Catalyst. I am really thankful to them for helping me to get this job." <br /><span>Mr. Sawagat Baral</span></li>
+                    <li>" QuikJobs is fully transparent in their operations and I am fully satisfied with the services provided y them as well as the company with I have joined through QuikJobs. I am really thankful to them for helping me to get this job." <br /><span>Mr. Sawagat Baral</span></li>
                     
-                    <li>"Basically I am from very rural area of Maharashtra with the help of Campus Catalyst I got good opportunity to work in abroad and big agriculture company. As agriculture become very serious as well as crucial.  " <br /><span>Mr. Ajay Swain</span></li>
+                    <li>"Basically I am from very rural area of Maharashtra with the help of QuikJobs I got good opportunity to work in abroad and big agriculture company. As agriculture become very serious as well as crucial.  " <br /><span>Mr. Ajay Swain</span></li>
                     
-                    <li>"Campus Catalyst is fully transparent in their operations and I am fully satisfied with the services provided by them as well as the company with I have joined through Campus Catalyst. I am really thankful to them for help me to get this job"  <br /><span>S Pundla</span></li>
+                    <li>"QuikJobs is fully transparent in their operations and I am fully satisfied with the services provided by them as well as the company with I have joined through QuikJobs. I am really thankful to them for help me to get this job"  <br /><span>S Pundla</span></li>
                 </ul></a>
             </div>
 
@@ -362,7 +362,7 @@ function validate(frm)
     <form action="#" method="post" onSubmit="return validate(this);">
     <div class="popohline"><i class="fa fa-envelope-o"></i> Job Alert!</div>
     <div class="fulldiv">
-    Get Free Job Alerts on your Mobile and Email from Campus Catalyst
+    Get Free Job Alerts on your Mobile and Email from QuikJobs
     </div>
     <div class="acforminfo">Fillup the form below <div style="float:right"> * Mandatory Fields</div></div>
     <div class="fulldiv">
@@ -788,7 +788,7 @@ function validate(frm)
         |
         <a href="#" title="Site Map">Site Map</a>
         </div>
-        <div class="copyrighttxt">&copy; Copyright : 2017 Campus Catalyst - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
+        <div class="copyrighttxt">&copy; Copyright : 2017 QuikJobs - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
     </div>
 </div>
 <a href="#" class="scrollToTop"></a>

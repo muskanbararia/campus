@@ -11,7 +11,7 @@
 </div>
  
 <div style="display:none;"><h1>Our Services : Job Recruitment</h1></div>
-<div style="display:none;"><h2>Campus Catalyst </h2></div>
+<div style="display:none;"><h2>QuikJobs </h2></div>
 
 
 <script language="javascript">
@@ -45,15 +45,15 @@ f.style.display=(f.style.display == "none")?"block":"none";
                 </p>
                 <p>
                 
-                <strong>Campus Catalyst</strong> work with client companies, building   relationships in order to gain a better understanding of their   recruitment needs and requirements. We attract candidates by drafting   advertising copy for use in a wide range of media, as well as by   networking, headhunting and through referrals. We screen candidates,   interview them, do background checks, and finally match candidates to   their clients.
+                <strong>QuikJobs</strong> work with client companies, building   relationships in order to gain a better understanding of their   recruitment needs and requirements. We attract candidates by drafting   advertising copy for use in a wide range of media, as well as by   networking, headhunting and through referrals. We screen candidates,   interview them, do background checks, and finally match candidates to   their clients.
                 </p>
                 <p>
                 
-                At Campus Catalyst we &ldquo;get&rdquo; people. Understanding people   helps us select and recruit the right candidates.  Understanding our   clients enables us to find smart solutions for them. </p>
+                At QuikJobs we &ldquo;get&rdquo; people. Understanding people   helps us select and recruit the right candidates.  Understanding our   clients enables us to find smart solutions for them. </p>
                 
                 
                 
-                <p>Campus Catalyst desires continues to be your go-to staffing company for all our staffing needs, as you could not ever imagine having a reason to take our business to anywhere</p>
+                <p>QuikJobs desires continues to be your go-to staffing company for all our staffing needs, as you could not ever imagine having a reason to take our business to anywhere</p>
                 <p>
                 We have adopted the international practices and procedures that are designed to attract and hire the best talent available in the market; thereby offering the best employee recruitment. We provide our client companies with not only a set of candidates, but also discussion on best-fit market availability, comparative benchmarking and a comfort knowing. Our online recruitment solutions are the best in the market today. 
                 <div style="float:right"><a href="javascript:flipCell(0)"><span class="cpl1">Read more...</span></a></div>
@@ -85,9 +85,9 @@ f.style.display=(f.style.display == "none")?"block":"none";
            <li>Prompt and   detailed feedback on the reasons for non-suitability of profiles and if   suitable, on the further processes to complete the hiring.</li>
         </ul>
        
-        Campus Catalyst posses the best talents and skilled manpower(s),   that is ready to meet the global challenges for Search, Selection,   Staffing and Outsourcing Services. Our company is also equipped with   latest technology and offerings to strengthen our services for   successful recruitment services globally. We use structured   methodologies and proven processes that help us as well as our client to   reduce the cost &amp; complexity of the selection, staffing,   outsourcing and head hunting process. It also reduces the risk as well   as to implement fewer efforts for more output. We assist you with   required efforts at the every step of the assignment life cycle. Our   structured methodology for search, selection, outsourcing, staffing and   headhunting also guides our client the best combination of time frame   and cost effective services.
+        QuikJobs posses the best talents and skilled manpower(s),   that is ready to meet the global challenges for Search, Selection,   Staffing and Outsourcing Services. Our company is also equipped with   latest technology and offerings to strengthen our services for   successful recruitment services globally. We use structured   methodologies and proven processes that help us as well as our client to   reduce the cost &amp; complexity of the selection, staffing,   outsourcing and head hunting process. It also reduces the risk as well   as to implement fewer efforts for more output. We assist you with   required efforts at the every step of the assignment life cycle. Our   structured methodology for search, selection, outsourcing, staffing and   headhunting also guides our client the best combination of time frame   and cost effective services.
         
-        Campus Catalyst has successfully completed a multitude of such   assignments. Requiring us to place a large number of people   simultaneously, possessing varied skill-sets and at different levels to   contribute towards an efficient unit for the client, with a quick   turnaround time.
+        QuikJobs has successfully completed a multitude of such   assignments. Requiring us to place a large number of people   simultaneously, possessing varied skill-sets and at different levels to   contribute towards an efficient unit for the client, with a quick   turnaround time.
         </div>     
   </div>
 
@@ -175,7 +175,7 @@ f.style.display=(f.style.display == "none")?"block":"none";
         </div>
         <div class="space"></div>
     </div>    <div class="orangeheadline2"><a href="#" target="_blank" title="Download Brochure">Download Brochure</a>
-    <p>Campus Catalyst desires continues to be your go-to staffing company for all our staffing needs, as you could not ever imagine having a reason to take our business to anywhere else....</p></div>
+    <p>QuikJobs desires continues to be your go-to staffing company for all our staffing needs, as you could not ever imagine having a reason to take our business to anywhere else....</p></div>
     <div class="smallspace"></div>
 </div>
 
@@ -651,7 +651,7 @@ function validate(frm)
         |
         <a href="#" title="Site Map">Site Map</a>
         </div>
-        <div class="copyrighttxt">&copy; Copyright : 2017 Campus Catalyst - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
+        <div class="copyrighttxt">&copy; Copyright : 2017 QuikJobs - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
     </div>
 </div>
 <a href="#" class="scrollToTop"></a>

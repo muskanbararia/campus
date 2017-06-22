@@ -9,7 +9,7 @@
 </div>
  
 <div style="display:none;"><h1>Contact Us</h1></div>
-<div style="display:none;"><h2>Campus Catalyst</h2></div>
+<div style="display:none;"><h2>QuikJobs</h2></div>
 <div style="display:none;"><h3>D- Wing, 501, Near to Edden Garden, Vedant, Wakad, Pune</h3></div>
 <script  src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script type="text/javascript">
@@ -43,7 +43,7 @@ function validate(frm)
         <div class="smallspace"></div>
         <div class="twotwodiv contacttext">
         	<div class="headline">Get in Touch</div>
-        	<p>Campus Catalyst<br>
+        	<p>QuikJobs<br>
               <i class="fa fa-map-marker"></i>D- Wing, 501, Near to Edden Garden,<br> Vedant, Wakad, Pune<br>
               
             </p>
@@ -617,7 +617,7 @@ function validate(frm)
         |
         <a href="#" title="Site Map">Site Map</a>
         </div>
-        <div class="copyrighttxt">&copy; Copyright : 2017 Campus Catalyst - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
+        <div class="copyrighttxt">&copy; Copyright : 2017 QuikJobs - Developed By <a href="http://globaltechpromoters.com"></a>Global Tech Promoters</div>
     </div>
 </div>
 <a href="#" class="scrollToTop"></a>

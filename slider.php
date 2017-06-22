@@ -31,7 +31,7 @@
             <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
                 <div class="sl-slide-inner">
                     <div class="bg-img bg-img-1"><img src="img/slider/11.jpg" title="Corporate Resources" alt="Corporate Resources"></div>
-                    <h1>Campus Catalyst</h1>
+                    <h1>QuikJobs</h1>
                   <blockquote><p>We are India's foremost Job Consultancy catering to multifarious job seekers as well as recruiters in India, and helps recruit quality manpower, without having to go through the cumbersome recruitment process...</p><cite><a href="#">Learn More</a></cite></blockquote>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                 <div class="sl-slide-inner">
                     <div class="bg-img bg-img-3"><img src="img/slider/3.jpg" alt="Recruitment and Hiring Process"></div>
                     <h1>Recruitment &amp; Hiring Process</h1>
-                  <blockquote><p>At Campus Catalyst, we not only provide recruitment consultancy services to our clients but also give the applicants a perfect platform to get their dream jobs.<br /> We can help our clients to get the suitable candidates...
+                  <blockquote><p>At QuikJobs, we not only provide recruitment consultancy services to our clients but also give the applicants a perfect platform to get their dream jobs.<br /> We can help our clients to get the suitable candidates...
 </p><cite><a href="index1242.html?actid=015&amp;path=Recruitment-Process&amp;P-id=1746l1deAgef5915">Learn More</a>
                   </cite></blockquote>
                 </div>
@@ -66,7 +66,7 @@
                 <div class="sl-slide-inner">
                     <div class="bg-img bg-img-5"><img src="img/slider/5.jpg" alt="Human Resources Next ... Level"></div>
                     <h1>Vision , Mission & Values</h1>
-                  <blockquote><p>Campus Catalyst aim is to be the preferred choice of employers, recruitment agencies and employees, thereby maintaining our position as the leading independent recruitment company in India...</p><cite><a href="index7709.html?actid=07&amp;path=Selection&amp;P-id=1746l1deAgef5915">Learn More</a></cite></blockquote>
+                  <blockquote><p>QuikJobs aim is to be the preferred choice of employers, recruitment agencies and employees, thereby maintaining our position as the leading independent recruitment company in India...</p><cite><a href="index7709.html?actid=07&amp;path=Selection&amp;P-id=1746l1deAgef5915">Learn More</a></cite></blockquote>
                 </div>
             </div>
         </div>
