@@ -112,7 +112,7 @@ var countdownTimer = setInterval('secondPassed()', 1000);
 
                        <div class="orangeheadline"><i class="fa fa-file-text-o"></i> Submit your Resume now !</div>
                     <div class="acforminfo">Please fillup the form below to Submit Resume. <span><i class="star">*</i> Mark are mandatory</span></div>
-					<form  id="form1" action="resume.php" method="POST"   enctype="multipart/form-data"> 
+					<form  id="form1" action="update-resume.php" method="POST"   enctype="multipart/form-data"> 
                                         
                     <div class="acform">
                     	
@@ -195,8 +195,9 @@ var countdownTimer = setInterval('secondPassed()', 1000);
                         <option value="Diploma">Diploma</option>
                        
                                                 </select>
-   						</li>
+                        </li>
                         </ul>
+                        <ul>
                         <ul>
                         	<li>Gender <i class="star">*</i></li>
                             <li>
@@ -647,6 +648,15 @@ var countdownTimer = setInterval('secondPassed()', 1000);
                     $img_name = $_FILES['resume']['name'];
               $img_tmp_name = $_FILES['resume']['tmp_name'];
               $code = substr( md5(rand()), 0, 7);              $img = $code.$img_name;
+              $insert_package2="DELETE FROM resume
+WHERE email='$email';";  
+
+
+                    if($dbcon->query($insert_package2))  
+                    {
+                        
+                    }
+              
               if(move_uploaded_file($img_tmp_name, "./resume/".$img)){
                     
 
