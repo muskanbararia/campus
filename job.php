@@ -102,16 +102,21 @@
         if(isset($_POST['search']))
         {
             $loc = $_POST['jobLoc'];
-            
+            $view_users_query="SELECT * from employer WHERE status='1' AND ug_qual = '$loc' LIMIT $offset, $rec_limit";
             
             //echo $view_users_query;
            // exit();//select query for viewing users.
         }
         else{
-            
+            if(isset($_GET['type'])){
             $loc=$_GET['type'];
+            $view_users_query="SELECT * from employer WHERE status='1' AND ug_qual = '$loc' LIMIT $offset, $rec_limit";
+        }
+            else{
+                $view_users_query="SELECT * from employer WHERE status='1' LIMIT $offset, $rec_limit";
+            }
         }  
-        $view_users_query="SELECT * from employer WHERE status='1' AND ug_qual LIKE '$loc' LIMIT $offset, $rec_limit";
+        
         $run=mysqli_query($dbcon,$view_users_query);//here run the sql query.  
         while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
         {  $id=$row[0];
