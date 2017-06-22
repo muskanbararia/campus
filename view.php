@@ -81,7 +81,7 @@ function validate(frm)
             $sal=$row[14];
             $cand=$row[15];
             $ug=$row[16];
-            $pg=$row[17];
+            
             $web=$row[7];
 
 
@@ -141,16 +141,13 @@ function validate(frm)
               </div>      
               </div>
                
-                            <div class="headline1"><span class="cpl1">Qualification</span></div>
+                            <div class="headline1"><span class="cpl1">Field</span></div>
               <div class="acform">
                              <ul>
-                <li>UG Qulification</li>
+                <li></li>
                 <li><?php echo $ug; ?> </li>
                </ul>
-                                              <ul>
-                <li>PG Qulification</li>
-                <li><?php echo $pg; ?> </li>
-               </ul>
+                                              
                			                 
                              </div>       
                               

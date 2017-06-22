@@ -768,7 +768,7 @@ We make sure that the exercise of Sharing Your Requirement will be a beneficial 
                     $sal_det=$_POST['salary_details'];
                     $profile=$_POST['candidate_profile'];
                     $ug_qual=$_POST['ugDetails'];
-                    $pg_qual="NA";
+                    $pg_qual='NA';
                     $start=$_POST['start'];
                     $end=$_POST['end'];
                     $time=$start."-".$end;
