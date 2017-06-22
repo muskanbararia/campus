@@ -38,16 +38,9 @@
                     ?>        
                    <?php
 
-                    if (!isset($_SESSION['user'])): ?> 
-                           <li><a href="#" title="Employers"><i class="fa fa-group"></i><br /><span>Employers</span></a>
-                    <ul>
-                        <li><a href="login-emp.php" title="Hotjob"><span>Login</span></a></li>
-                        <li><a href="reg-emp.php" title="Work With Us"><span>Register</span></a></li>
-                        
-                        <!--<li><a href="job-by-cat.php" title="Job By Category"><span>Job By Category</span></a></li>
-                        <li><a href="job-by-loc.php" title="Job By Location"><span>Job By Location</span></a></li>-->
-                        </ul>
-                    </li>                
+                    if (!isset($_SESSION['user'])) : ?> 
+
+                                          
                                            
                        <?php else: ?>
                         <?php
@@ -75,7 +68,22 @@
 ?>                       
                                                 
                    <?php endif; ?>
+                   <?php if (!isset($_SESSION['user'])) {
+                    if (!isset($_SESSION['emp'])) { ?>
+
+                     <li><a href="#" title="Employers"><i class="fa fa-group"></i><br /><span>Employers</span></a>
                     
+                    <ul>
+                        <li><a href="login-emp.php" title="Hotjob"><span>Login</span></a></li>
+                        <li><a href="reg-emp.php" title="Work With Us"><span>Register</span></a></li>
+                        
+                        <!--<li><a href="job-by-cat.php" title="Job By Category"><span>Job By Category</span></a></li>
+                        <li><a href="job-by-loc.php" title="Job By Location"><span>Job By Location</span></a></li>-->
+                        </ul>
+                    </li>
+<?php }} ?>
+
+
                    
                     <li><a href="#" title="Hotjob"><i class="fa fa-briefcase"></i><br /><span>Hot Jobs</span></a>
                         <ul>
