@@ -47,25 +47,9 @@ tr:hover{background-color:#f5f5f5}
   <tr>
     <td><?=$jobId?></td>
     <td>Not Paid</td>
-    <td>$100</td>
+    <td>₹​ 299</td>
   </tr>
   <? } ?>
-
-  <tr>
-    <td>Lois</td>
-    <td>Not Paid</td>
-    <td>$150</td>
-  </tr>
-  <tr>
-    <td>Joe</td>
-    <td>Pay To Complete</td>
-    <td>$300</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>Pay to Join</td>
-    <td>$250</td>
-  </tr>
 </table>
 </div>
 

@@ -27,18 +27,6 @@
 	z-index:100;
     background: #ffc url(img/pointer.gif) no-repeat -15px 5px;
 }
-textarea{  
-  /* box-sizing: padding-box; */
-  overflow:hidden;
-  /* demo only: */
-  padding:10px;
-  width:250px;
-  font-size:14px;
-  margin:50px auto;
-  display:block;
-  border-radius:10px;
-  border:6px solid #556677;
-}
 .clshref { color:#3366FF; }
 </style>
 
@@ -111,25 +99,7 @@ function secondPassed() {
         seconds--;
     }
 }
-
-$(document).ready(function() {
-    var max_fields      = 10; //maximum input boxes allowed
-    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
-    var add_button      = $(".add_field_button"); //Add button ID
-    
-    var x = 1; //initlal text box count
-    $(add_button).click(function(e){ //on add input button click
-        e.preventDefault();
-        if(x < max_fields){ //max input box allowed
-            x++; //text box increment
-            $(wrapper).append('<div><input type="text" name="mytext[]" style="margin-top: 5px;"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-        }
-    });
-    
-    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-        e.preventDefault(); $(this).parent('div').remove(); x--;
-    })
-});
+var countdownTimer = setInterval('secondPassed()', 1000);
 </script>
 <div class="middle">
 	<div class="middlediv">
@@ -146,65 +116,12 @@ $(document).ready(function() {
                                         
                     <div class="acform">
                     	
+                        
+                        
                         <ul>
-                        	<li>Your Full Name <i class="star">*</i></li>
+                        	<li>Your Name <i class="star">*</i></li>
                             <li><input name="name" value="" type="text" required maxlength="40" ></li>
                         </ul>
-
-                         <ul>
-                            <li>Gender <i class="star">*</i></li>
-                            <li>
-                                <div class="ac50">
-                                    <input type="radio" id="r2" required name="gender" value="Male"  />
-                                    <label for="r2"><span></span> Male</label>
-                                </div>
-                                <div class="aclast50">
-                                    <input required type="radio" id="r3" name="gender" value="Female"  />
-                                    <label for="r3"><span></span> Female</label>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <ul>
-                            <li>Category <i class="star">*</i></li>
-                            <li>
-                                <div class="ac50">
-                                    <input type="radio" id="r4" required name="category" value="SC"  />
-                                    <label for="r4"><span></span> SC</label>
-                                </div>
-                                <div class="aclast50">
-                                    <input required type="radio" id="r5" name="category" value="ST"  />
-                                    <label for="r5"><span></span> ST</label>
-                                </div>
-                                <div class="aclast50">
-                                    <input required type="radio" id="r6" name="category" value="OBC"  />
-                                    <label for="r6"><span></span> OBC</label>
-                                </div>
-                                <div class="aclast50">
-                                    <input required type="radio" id="r7" name="category" value="DEFENCE"  />
-                                    <label for="r7"><span></span> DEFENCE</label>
-                                </div>
-                                <div class="aclast50">
-                                    <input required type="radio" id="r8" name="category" value="WOMAN"  />
-                                    <label for="r8"><span></span> WOMAN</label>
-                                </div>
-                                <div class="aclast50">
-                                    <input required type="radio" id="r9" name="category" value="GENERAL"  />
-                                    <label for="r9"><span></span> GENERAL</label>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <ul>
-                            <li>Date Of Birth <i class="star">*</i></li>
-                            <li><input name="DOB" type="text" required maxlength="40" ></li>
-                        </ul>
-
-                        <ul>
-                            <li>Address<i class="star">*</i></li>
-                            <li><input name="address" type="text" required maxlength="40" ></li>
-                        </ul>
-
                         <ul>
                         	<li>Total Work Experience <i class="star">*</i></li>
                             <li>
@@ -258,23 +175,15 @@ $(document).ready(function() {
 							</div>
                             </li>
                         </ul>
-
                         <ul>
                             <li>BackGround<i class="star">*</i></li>
                             <li><input name="background" value="" type="text" required></li>
                             <div class="smalltext">Anything About Yourself</div>
                         </ul>
-
                         <ul>
                             <li>Previous Job<i class="star">*</i></li>
                             <li><input name="pjob" type="text" required></li>
                              <div class="smalltext">If fresher, Enter Fresher</div>
-                        </ul>
-
-                        <ul>
-                            <li>Candidate Details<i class="star">*</i></li>
-                            <li><input name="candidate" type="text" required></li>
-                             <div class="smalltext">Summary</div>
                         </ul>
                         
                         <ul>
@@ -290,12 +199,7 @@ $(document).ready(function() {
                         </ul>
                         <ul>
                             <li>Qualification Details<i class="star">*</i></li>
-                            <li>
-                                <div class="input_fields_wrap">
-                                    <button class="add_field_button">Add More Fields</button>
-                                    <div><input type="text" name="mytext[]" style="margin-top: 5px;"></div>
-                                </div>
-                            </li>
+                            <li><input name="qdetails" type="text" required></li>
                             <div class="smalltext">Details About Qulicfication</div>
                         </ul>
                         <ul>
@@ -313,7 +217,19 @@ $(document).ready(function() {
                             <li><input name="skills" value="" type="text" required></li>
                             <div class="smalltext">For e.g. Welding, Driving etc.</div>
                         </ul>
-                       
+                        <ul>
+                        	<li>Gender <i class="star">*</i></li>
+                            <li>
+                            	<div class="ac50">
+                                    <input type="radio" id="r2" required name="gender" value="Male"  />
+                                    <label for="r2"><span></span> Male</label>
+                                </div>
+ 								<div class="aclast50">
+                                	<input required type="radio" id="r3" name="gender" value="Female"  />
+                                	<label for="r3"><span></span> Female</label>
+                                </div>
+                            </li>
+                        </ul>
                         <ul>
                         	<li>Country <i class="star">*</i></li>
                             <li>
@@ -323,13 +239,12 @@ $(document).ready(function() {
                             
 						</li>
                         </ul>
-
                         <ul>
                         	<li>City <i class="star">*</i></li>
                             <li>
                             <select name="city" required id="city">
                             <option value="">Select</option>
-                                                        <option style="font-weight:bold; background-color:#E1E9F7; " disabled="disabled" value="16" >---- Top Cities---- </option>
+                                                        <option style="font-weight:bold; background-color:#E1E9F7; " disabled="disabled" value="16" >---- Top Metropolitan Cities---- </option>
                                                                                     <option value="47" >Ahmedabad</option>
                                                         <option value="48" >Bengaluru / Bangalore</option>
                                                         <option value="49" >Chandigarh</option>

@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width"/>
 <meta name="description" content="The Curriculum Vitae of Joe Bloggs."/>
 <meta charset="UTF-8"> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
 <link type="text/css" rel="stylesheet" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
@@ -16,7 +15,6 @@
 
 </head>
 <body id="top">
-<a href="//pdfcrowd.com/url_to_pdf/">Save to PDF</a>
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
 		<div id="headshot" class="quickFade">
@@ -125,22 +123,7 @@
 		
 	</div>
 </div>
-<button id="cmd">Save As PDF</button>
-<script type="text/javascript">
-	var doc = new jsPDF();
-	var specialElementHandlers = {
-	    '#editor': function (element, renderer) {
-	        return true;
-	    }
-	};
-
-	$('#cmd').click(function () {
-	    doc.fromHTML($('#top').html(), 15, 15, {
-	        'width': 170,
-	            'elementHandlers': specialElementHandlers
-	    });
-	    doc.save('resume.pdf');
-	});
-</script>
+<script type="text/javascript" src="app.js">
+    </script>
 </body>
 </html>
