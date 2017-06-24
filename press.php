@@ -37,12 +37,14 @@ function validate(frm)
                 <li><a href="why-choose-us.php" title="Why Choose Us"><span> Why Choose Us</span></a></li>
                 
                 <li><a href="vision.php" title="Vision , Mission & Values"><span>Vision , Mission & Values
-                </span></a></li><li><a href="diversity.php" title="Diversity"><span>Diversity</span></a></li>
+                </span></a></li>
+                <li><a href="diversity.php" title="Diversity"><span>Diversity</span></a></li>
                 <li><a href="unique.php" title="Unique Approach"><span>Unique Approach</span></a></li>
                 <li><a href="quality.php" title="Quality Policy"><span>Quality Policy</span></a></li>
                 <li><a href="future.php" title="Future Outlook"><span>Future Outlook</span></a></li>
                 <li><a href="press.php" title="Press Room" class="active"><span>Press Room</span></a></li>
-                <li><a href="director.php" title="From the Director's Desk"><span>From the Director's Desk</span></a></li>            </ul>
+                <li><a href="director.php" title="From the Director's Desk"><span>From the Director's Desk</span></a></li> 
+                </ul>
             </div>
             <div><div class="tab-content">
            <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>

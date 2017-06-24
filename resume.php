@@ -175,6 +175,16 @@ var countdownTimer = setInterval('secondPassed()', 1000);
 							</div>
                             </li>
                         </ul>
+                        <ul>
+                            <li>BackGround<i class="star">*</i></li>
+                            <li><input name="background" value="" type="text" required></li>
+                            <div class="smalltext">Anything About Yourself</div>
+                        </ul>
+                        <ul>
+                            <li>Previous Job<i class="star">*</i></li>
+                            <li><input name="pjob" type="text" required></li>
+                             <div class="smalltext">If fresher, Enter Fresher</div>
+                        </ul>
                         
                         <ul>
                         	<li>Mobile No <i class="star">*</i></li>
@@ -188,6 +198,11 @@ var countdownTimer = setInterval('secondPassed()', 1000);
                             <li><input name="qualification" value="" type="text" required maxlength="40" ></li>
                         </ul>
                         <ul>
+                            <li>Qualification Details<i class="star">*</i></li>
+                            <li><input name="qdetails" type="text" required></li>
+                            <div class="smalltext">Details About Qulicfication</div>
+                        </ul>
+                        <ul>
                         <li>Specilization <i class="star">*</i></li>
                          <li>              
                         <select required name="specilization" size="1">
@@ -196,6 +211,11 @@ var countdownTimer = setInterval('secondPassed()', 1000);
                        
                                                 </select>
    						</li>
+                        </ul>
+                        <ul>
+                            <li>Specail Skills<i class="star">*</i></li>
+                            <li><input name="skills" value="" type="text" required></li>
+                            <div class="smalltext">For e.g. Welding, Driving etc.</div>
                         </ul>
                         <ul>
                         	<li>Gender <i class="star">*</i></li>
@@ -593,10 +613,10 @@ var countdownTimer = setInterval('secondPassed()', 1000);
                         </ul>
                        
                         <ul>
-                        	<li>Attach Resume <i class="star">*</i></li>
+                        	<li>Upload Picture <i class="star">*</i></li>
                             <li> 
                               <input class="file" name="resume" required type="file"><br> 
-                              <div class="smalltext">Supported Formats: pdf, rtf, doc or docx file.max file size : 500kb</div>
+                              <div class="smalltext">Supported Formats: png, jpg, jpeg or gif file.max file size : 500kb</div>
                             </li>
                         </ul>
                        
@@ -631,9 +651,12 @@ var countdownTimer = setInterval('secondPassed()', 1000);
                     $name=$_POST['name'];
                     $email=$_SESSION['user'];
                     $phone=$_POST['mobile'];
-                    
                     $year=$_POST['year'];
                     $month=$_POST['month'];
+                    $background = $_POST['background'];
+                    $skills = $_POST['skills'];
+                    $qdet = $_POST['qdetails'];
+                    $pjob = $_POST['pjob'];
                     $exp=$year."year".$month."month";
                     $qual=$_POST['qualification'];
                     $spec=$_POST['specilization'];
@@ -646,27 +669,18 @@ var countdownTimer = setInterval('secondPassed()', 1000);
                     $salary=$lac."Lac".$thousand."thousand";
                     $img_name = $_FILES['resume']['name'];
               $img_tmp_name = $_FILES['resume']['tmp_name'];
-              $code = substr( md5(rand()), 0, 7);              $img = $code.$img_name;
+              $code = substr( md5(rand()), 0, 7);              
+              $img = $code.$img_name;
               if(move_uploaded_file($img_tmp_name, "./resume/".$img)){
-                    
-
-                    
-                    $insert_package="INSERT INTO resume (name,work_exp,email,mobile,qual,spec,gender,country,city,aoi,salary,cv) VALUE ('$name','$exp','$email','$phone','$qual','$spec','$gender','$country','$city','$aoi','$salary','$img')";  
-
-
-                    if($dbcon->query($insert_package))  
+                $insert_package="INSERT INTO resume (name,work_exp,email,mobile,qual,spec,gender,country,city,aoi,salary,dp,bg,qdetails,skills,pjob) VALUE ('$name','$exp','$email','$phone','$qual','$spec','$gender','$country','$city','$aoi','$salary','$img','$background','$qdet','$skills','$pjob')";
+                if($dbcon->query($insert_package))  
                     {  
-                        echo "<script>alert('Registered successfully')</script>";
+                        echo "<script>alert('Uploaded successfully')</script>";
                     }  
                     
                     }   
                 }
                 ?>
-                
-                
-                
-                
-                
                 
                 </div>
             </div>
